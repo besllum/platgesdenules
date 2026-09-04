@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Casetes obertes — Platges de Nules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #f5f2ec; color: #1a1a18; font-family: Jost, system-ui, sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+  a { color: #1a1a18; text-decoration: none; }
+  a:hover { color: #37798f; }
+  html { scroll-behavior: smooth; }
+</style>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(245,242,236,.94);backdrop-filter:blur(8px)">
+  <div style="max-width:1400px;margin:0 auto;padding:8px 40px 0;display:flex;justify-content:flex-end;align-items:center;gap:14px">
+    <a href="https://www.instagram.com/platgesdenules/" aria-label="Instagram" style="display:block;line-height:0;color:#8a857c" style-hover="color:#1a1a18">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:block">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/platgesdenules/" aria-label="Facebook" style="display:block;line-height:0;color:#8a857c" style-hover="color:#1a1a18">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:block">
+        <path d="M14.8 3.5h-2.3a3.6 3.6 0 0 0-3.6 3.6V10H7v3h1.9v7.5"></path>
+        <path d="M8.9 13h4.4"></path>
+      </svg>
+    </a>
+    <span style="width:1px;height:10px;background:#d4cec1"></span>
+    <a href="mailto:platgesdenules@gmail.com" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#8a857c" style-hover="color:#1a1a18">{{ t.escriuNos }}</a>
+    <span style="display:flex;align-items:center;gap:5px;background:#37798f;border-radius:999px;padding:4px 9px">
+      <button type="button" onClick="{{ setVal }}" style="{{ estilVal }}">VAL</button>
+      <span style="font-size:9px;color:rgba(245,242,236,.4)">/</span>
+      <button type="button" onClick="{{ setCas }}" style="{{ estilCas }}">CAS</button>
+    </span>
+  </div>
+  <div style="max-width:1400px;margin:0 auto;padding:10px 40px 22px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 26px">
+    <nav style="{{ navEsq }}">
+      <a href="#dalt" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid #1a1a18;padding-bottom:3px">{{ t.navCasetes }}</a>
+      <span onMouseEnter="{{ obreDrop }}" onMouseLeave="{{ tancaDrop }}" style="position:relative;display:inline-flex;align-items:center">
+        <a href="patrimoni.html" onClick="{{ toggleDrop }}" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase">{{ t.navProblema }}</a>
+        <sc-if value="{{ dropObert }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute;top:100%;left:0;padding-top:12px;display:flex;flex-direction:column;min-width:172px;z-index:60">
+            <span style="display:flex;flex-direction:column;background:#f5f2ec;border:1px solid #ddd8cd;box-shadow:0 10px 30px rgba(26,26,24,.09)">
+              <a href="patrimoni.html#cultura" onClick="{{ tancaDrop }}" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px 16px;border-bottom:1px solid #e7e2d8;color:#4a4740" style-hover="background:#ece7dd;color:#1a1a18">{{ t.navCultural }}</a>
+              <a href="patrimoni.html#natural" onClick="{{ tancaDrop }}" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px 16px;color:#4a4740" style-hover="background:#ece7dd;color:#1a1a18">{{ t.navNatura }}</a>
+            </span>
+          </span>
+        </sc-if>
+      </span>
+    </nav>
+    <button type="button" onClick="{{ toggleMenu }}" aria-label="Menu" style="{{ estilBurger }}">
+      <span style="{{ barra1 }}"></span>
+      <span style="{{ barra2 }}"></span>
+      <span style="{{ barra3 }}"></span>
+    </button>
+    <a href="index.html" style="flex:0 0 auto;display:block;line-height:0"><img src="logo-platges-nules-trim.png" alt="Platges de Nules" style="display:block;height:46px;width:auto;filter:invert(.74)"></a>
+    <nav style="{{ navDreta }}">
+      <a href="index.html#actualitat" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase">{{ t.navActualitat }}</a>
+      <a href="index.html#marnostra" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase">Mar Nostra</a>
+      <a href="index.html#sumat" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase">{{ t.navSumat }}</a>
+    </nav>
+    <sc-if value="{{ menuObert }}" hint-placeholder-val="{{ false }}">
+      <nav style="flex:1 1 100%;display:flex;flex-direction:column;gap:2px;padding:14px 0 4px;border-top:1px solid #ddd8cd">
+        <a href="#dalt" onClick="{{ tancaMenu }}" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:13px 0;border-bottom:1px solid #e7e2d8">{{ t.navCasetes }}</a>
+        <a href="patrimoni.html" onClick="{{ tancaMenu }}" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:13px 0;border-bottom:1px solid #e7e2d8">{{ t.navProblema }}</a>
+        <a href="patrimoni.html#cultura" onClick="{{ tancaMenu }}" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:11px 0 11px 18px;color:#6d6155;border-bottom:1px solid #e7e2d8">{{ t.navCultural }}</a>
+        <a href="patrimoni.html#natural" onClick="{{ tancaMenu }}" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:11px 0 11px 18px;color:#6d6155;border-bottom:1px solid #e7e2d8">{{ t.navNatura }}</a>
+        <a href="index.html#actualitat" onClick="{{ tancaMenu }}" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:13px 0;border-bottom:1px solid #e7e2d8">{{ t.navActualitat }}</a>
+        <a href="index.html#marnostra" onClick="{{ tancaMenu }}" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:13px 0;border-bottom:1px solid #e7e2d8">Mar Nostra</a>
+        <a href="index.html#sumat" onClick="{{ tancaMenu }}" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:13px 0">{{ t.navSumat }}</a>
+      </nav>
+    </sc-if>
+  </div>
+</header>
+
+<section id="dalt" style="position:relative">
+  <div style="position:relative;width:100%;aspect-ratio:2/1;max-height:620px;background:#e7e2d8">
+    <div style="position:absolute;inset:0;overflow:hidden"><iframe src="https://www.youtube.com/embed/hiDcMqyFGFw?autoplay=1&mute=1&loop=1&playlist=hiDcMqyFGFw&controls=0&modestbranding=1&playsinline=1&rel=0&showinfo=0&disablekb=1" allow="autoplay; encrypted-media" frameBorder="0" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;aspect-ratio:16/9;min-width:100%;min-height:100%;border:0;pointer-events:none"></iframe></div>
+  </div>
+</section>
+
+<section style="padding:clamp(72px,10vw,130px) 40px">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(40px,7vw,110px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.eyebrow1 }}</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,4vw,52px);line-height:1.1;text-wrap:pretty">{{ t.introTitleA }} <em style="font-style: normal">{{ t.introTitleB }}</em></h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:22px;font-size:16px;line-height:1.85;color:#4a4740;max-width:58ch">
+      <p style="margin:0;text-wrap:pretty">{{ t.introP1 }}</p>
+      <p style="margin:0;text-wrap:pretty">{{ t.introP2 }}</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section style="padding:clamp(48px,8vw,110px) 40px clamp(24px,3vw,40px)">
+  <div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)">
+    <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.cartellsTitle }}</span>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:clamp(18px,2.4vw,34px)">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:14px">
+        <div style="position:relative;width:100%;aspect-ratio:3/4;background:#e7e2d8">
+          <image-slot id="cartell-2026" shape="rect" placeholder="Cartell 2026"></image-slot>
+        </div>
+        <figcaption style="text-align:center;display:flex;flex-direction:column;gap:4px">
+          <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#37798f">{{ t.ed5 }}</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.12em;color:#6d6155">2026</span>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:14px">
+        <div style="position:relative;width:100%;aspect-ratio:3/4;background:#e7e2d8">
+          <image-slot id="cartell-2025" shape="rect" placeholder="Cartell 2025"></image-slot>
+        </div>
+        <figcaption style="text-align:center;display:flex;flex-direction:column;gap:4px">
+          <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#37798f">{{ t.ed4 }}</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.12em;color:#6d6155">2025</span>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:14px">
+        <div style="position:relative;width:100%;aspect-ratio:3/4;background:#e7e2d8">
+          <image-slot id="cartell-2024" shape="rect" placeholder="Cartell 2024"></image-slot>
+        </div>
+        <figcaption style="text-align:center;display:flex;flex-direction:column;gap:4px">
+          <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#37798f">{{ t.ed3 }}</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.12em;color:#6d6155">2024</span>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:14px">
+        <div style="position:relative;width:100%;aspect-ratio:3/4;background:#e7e2d8">
+          <image-slot id="cartell-2023" shape="rect" placeholder="Cartell 2023"></image-slot>
+        </div>
+        <figcaption style="text-align:center;display:flex;flex-direction:column;gap:4px">
+          <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#37798f">{{ t.ed2 }}</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.12em;color:#6d6155">2023</span>
+        </figcaption>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:14px">
+        <div style="position:relative;width:100%;aspect-ratio:3/4;background:#e7e2d8">
+          <image-slot id="cartell-2022" shape="rect" placeholder="Cartell 2022"></image-slot>
+        </div>
+        <figcaption style="text-align:center;display:flex;flex-direction:column;gap:4px">
+          <span style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#37798f">{{ t.ed1 }}</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:20px;letter-spacing:.12em;color:#6d6155">2022</span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section style="padding:clamp(64px,8vw,110px) 40px;background:#ece7dd">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);justify-items:start">
+    <form onSubmit="{{ enviaIdea }}" style="display:flex;flex-direction:column;gap:18px;max-width:46ch;width:100%">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.ideesTitle }}</span>
+      <label style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6d6155">{{ t.ideesNom }}</span>
+        <input type="text" required="" value="{{ nomIdea }}" onChange="{{ setNomIdea }}" placeholder="{{ t.ideesNomPh }}" style="width:100%;padding:12px 0;border:0;border-bottom:1px solid #c9c2b4;background:transparent;font-family:inherit;font-size:15px;color:#1a1a18;outline:none" style-focus="border-color:#37798f">
+      </label>
+      <label style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6d6155">{{ t.ideesCognom }}</span>
+        <input type="text" value="{{ cognomIdea }}" onChange="{{ setCognomIdea }}" placeholder="{{ t.ideesCognomPh }}" style="width:100%;padding:12px 0;border:0;border-bottom:1px solid #c9c2b4;background:transparent;font-family:inherit;font-size:15px;color:#1a1a18;outline:none" style-focus="border-color:#37798f">
+      </label>
+      <label style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6d6155">{{ t.ideesCorreu }}</span>
+        <input type="email" required="" value="{{ correu }}" onChange="{{ setCorreu }}" placeholder="nom@correu.com" style="width:100%;padding:12px 0;border:0;border-bottom:1px solid #c9c2b4;background:transparent;font-family:inherit;font-size:15px;color:#1a1a18;outline:none" style-focus="border-color:#37798f">
+      </label>
+      <label style="display:flex;flex-direction:column;gap:8px">
+        <span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6d6155">{{ t.ideesText }}</span>
+        <textarea rows="5" value="{{ idea }}" onChange="{{ setIdea }}" placeholder="{{ t.ideesPh }}" style="width:100%;padding:12px;border:1px solid #c9c2b4;background:transparent;font-family:inherit;font-size:15px;line-height:1.7;color:#1a1a18;resize:vertical;outline:none" style-focus="border-color:#37798f"></textarea>
+      </label>
+      <button type="submit" style="align-self:flex-start;font-family:Jost,sans-serif;font-weight:400;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#f5f2ec;background:#37798f;border:0;border-radius:999px;padding:17px 40px;cursor:pointer" style-hover="background:#2b5f71">{{ t.ideesCta }}</button>
+      <sc-if value="{{ ideaEnviada }}" hint-placeholder-val="{{ false }}">
+        <p style="margin:0;font-size:13px;color:#37798f">{{ t.ideesOk }}</p>
+      </sc-if>
+    </form>
+  </div>
+</section>
+
+
+
+<footer style="padding:clamp(56px,7vw,90px) 40px 34px">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;padding-bottom:40px;border-bottom:1px solid #ddd8cd">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family: 'Cormorant Garamond',serif; font-weight: 300; font-size: 20px; letter-spacing: .24em; text-transform: uppercase; color: #37798F">PLATGES DE NULES</span>
+      <p style="margin:0;max-width:34ch;font-size:14px;line-height:1.8;color:#6d6155">{{ t.footAbout }}</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.footNav }}</span>
+      <a href="patrimoni.html" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.navProblema }}</a>
+      <a href="index.html#marnostra" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Mar Nostra</a>
+      <a href="index.html#actualitat" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.navActualitat }}</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.footSeguix }}</span>
+      <a href="https://www.instagram.com/platgesdenules/" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Instagram</a>
+      <a href="https://www.facebook.com/platgesdenules/" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Facebook</a>
+      <a href="mailto:platgesdenules@gmail.com" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.escriuNos }}</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">Legal</span>
+      <a href="legal.html#avis" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.legal1 }}</a>
+      <a href="legal.html#privacitat" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.legal2 }}</a>
+      <a href="legal.html#cookies" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Cookies</a>
+    </div>
+  </div>
+  <div style="max-width:1400px;margin:22px auto 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#37798f">
+    <span>© 2026 Associació Platges de Nules</span>
+    <span>{{ t.footNota }}</span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const TXT = {
+  val: {
+    escriuNos: "Escriu-nos", navProblema: "Patrimoni", navCultural: "Cultural", navNatura: "Natural", navCasetes: "Casetes obertes",
+    navActualitat: "Actualitat", navSumat: "Suma't",
+    kicker: "Jornada de portes obertes a l'arquitectura de vora mar",
+    heroA: "Un dia a l'any, les casetes", heroB: "obrin la porta",
+    heroCta: "Veure el programa",
+    eyebrow1: "Què és",
+    introTitleA: "Entrar per a entendre", introTitleB: "què estem perdent",
+    introP1: "Casetes obertes és la jornada en què els propietaris obrin les seues casetes de vora mar: porxos, emparrats, cuines d'estiu i persianes de fusta que expliquen com s'ha viscut la platja de Nules durant més d'un segle.",
+    introP2: "No és una exposició: és arquitectura viva, encara habitada, i el temporal se la va menjant. Cada visita és també una manera de dir que este paisatge mereix protecció.",
+    cartellsTitle: "Cinc edicions",
+    ed1: "1a edició", ed2: "2a edició", ed3: "3a edició", ed4: "4a edició", ed5: "5a edició",
+    videoLabel: "Vídeo",
+    t2025: "L'any de les visites plenes", p2025: "Quatre grups de visita guiada es van omplir en una hora. Es van obrir dos porxos nous i es va projectar per primera vegada l'arxiu de temporals sobre la façana d'una caseta.",
+    t2024: "La platja com a aula", p2024: "Edició amb tallers per a escolars: com es construïa una caseta, com es planta el borró i per què desapareix l'arena.",
+    t2023: "Memòria oral", p2023: "Enregistrament de converses amb veïns que estiuegen a les Marines des dels anys cinquanta. Part d'aquell material ja forma l'arxiu sonor de l'associació.",
+    t2022: "La primera vegada", p2022: "Sis casetes i molta improvisació. Va vindre molta més gent de la que esperàvem i va nàixer la jornada.",
+    eyebrow2: "Programa", progTitle: "Programa de la jornada",
+    act1t: "Obertura de les casetes", act1p: "Les dotze casetes obrin porxos i interiors. Els propietaris reben els visitants i expliquen la història de cada casa.",
+    act2t: "Visita guiada", act2p: "Recorregut a peu pel front litoral amb explicació de la tipologia constructiva i de l'efecte de la regressió sobre les cases.",
+    act3t: "Vermut a la fresca", act3p: "Parada al porxo comunitari amb productes de la comarca i memòria oral: veïns que conten com era la platja abans.",
+    act4t: "Xarrada i posta de sol", act4p: "Conversa oberta sobre el futur del litoral i la protecció del conjunt, amb la mar de fons.",
+    cap1: "Cuines d'estiu, taulells de rajola i finestres a la mar.",
+    cap2: "Els porxos i els emparrats: l'espai de vida de la caseta.",
+    cap3: "Les visites guiades expliquen la casa i la costa que la sosté.",
+    eyebrow3: "Informació pràctica", infoTitle: "Com participar",
+    infoText: "Sumar-te és gratuït. Només et compromet a estimar la platja.\nCom més serem, més forta serà la veu de Nules davant les administracions. Deixa'ns el teu correu i t'avisarem de cada mobilització.",
+    infoCta: "Suma't",
+    ideesTitle: "Idees i inquietuds", ideesNom: "Nom", ideesNomPh: "El teu nom", ideesCognom: "Cognoms", ideesCognomPh: "Els teus cognoms", ideesCorreu: "Correu", ideesText: "La teua idea",
+    ideesPh: "Conta'ns què t'agradaria veure a Casetes obertes.", ideesCta: "Enviar", ideesOk: "Gràcies! Ho llegim tot.",
+    rowData: "Data", rowDataV: "Segon dissabte de setembre",
+    rowHora: "Horari", rowHoraV: "10.00 – 14.00 · 17.00 – 20.30",
+    rowLloc: "Lloc", rowLlocV: "Les Marines, platja de Nules",
+    rowPreu: "Preu", rowPreuV: "Entrada lliure",
+    rowIdioma: "Idioma", rowIdiomaV: "Valencià i castellà",
+    footAbout: "Associació ciutadana per la defensa del litoral de Nules i de la seua arquitectura tradicional de vora mar.",
+    footNav: "Navegació", footSeguix: "Seguix-nos", legal1: "Avís legal", legal2: "Privacitat",
+    footNota: "Exemple — imatges i dates pendents de confirmació"
+  },
+  cas: {
+    escriuNos: "Escríbenos", navProblema: "Patrimonio", navCultural: "Cultural", navNatura: "Natural", navCasetes: "Casetas abiertas",
+    navActualitat: "Actualidad", navSumat: "Súmate",
+    kicker: "Jornada de puertas abiertas a la arquitectura junto al mar",
+    heroA: "Un día al año, las casetas", heroB: "abren la puerta",
+    heroCta: "Ver el programa",
+    eyebrow1: "Qué es",
+    introTitleA: "Entrar para entender", introTitleB: "qué estamos perdiendo",
+    introP1: "Casetas abiertas es la jornada en que los propietarios abren sus casetas junto al mar: porches, emparrados, cocinas de verano y persianas de madera que cuentan cómo se ha vivido la playa de Nules durante más de un siglo.",
+    introP2: "No es una exposición: es arquitectura viva, aún habitada, y el temporal se la está comiendo. Cada visita es también una forma de decir que este paisaje merece protección.",
+    cartellsTitle: "Cinco ediciones",
+    ed1: "1.ª edición", ed2: "2.ª edición", ed3: "3.ª edición", ed4: "4.ª edición", ed5: "5.ª edición",
+    videoLabel: "Vídeo",
+    t2025: "El año de las visitas llenas", p2025: "Cuatro grupos de visita guiada se llenaron en una hora. Se abrieron dos porches nuevos y se proyectó por primera vez el archivo de temporales sobre la fachada de una caseta.",
+    t2024: "La playa como aula", p2024: "Edición con talleres para escolares: cómo se construía una caseta, cómo se planta el barrón y por qué desaparece la arena.",
+    t2023: "Memoria oral", p2023: "Grabación de conversaciones con vecinos que veranean en Les Marines desde los años cincuenta. Parte de ese material ya forma el archivo sonoro de la asociación.",
+    t2022: "La primera vez", p2022: "Seis casetas y mucha improvisación. Vino mucha más gente de la que esperábamos y nació la jornada.",
+    eyebrow2: "Programa", progTitle: "Programa de la jornada",
+    act1t: "Apertura de las casetas", act1p: "Las doce casetas abren porches e interiores. Los propietarios reciben a los visitantes y explican la historia de cada casa.",
+    act2t: "Visita guiada", act2p: "Recorrido a pie por el frente litoral con explicación de la tipología constructiva y del efecto de la regresión sobre las casas.",
+    act3t: "Vermut al fresco", act3p: "Parada en el porche comunitario con productos de la comarca y memoria oral: vecinos que cuentan cómo era la playa antes.",
+    act4t: "Charla y puesta de sol", act4p: "Conversación abierta sobre el futuro del litoral y la protección del conjunto, con el mar de fondo.",
+    cap1: "Cocinas de verano, alicatados y ventanas al mar.",
+    cap2: "Los porches y los emparrados: el espacio de vida de la caseta.",
+    cap3: "Las visitas guiadas explican la casa y la costa que la sostiene.",
+    eyebrow3: "Información práctica", infoTitle: "Cómo participar",
+    infoText: "No hace falta reserva para entrar en las casetas. Las visitas guiadas tienen plazas limitadas: avísanos y te apuntamos al grupo de mañana o de tarde.",
+    infoCta: "Súmate",
+    ideesTitle: "Ideas e inquietudes", ideesNom: "Nombre", ideesNomPh: "Tu nombre", ideesCognom: "Apellidos", ideesCognomPh: "Tus apellidos", ideesCorreu: "Correo", ideesText: "Tu idea",
+    ideesPh: "Cuéntanos qué te gustaría ver en Casetas abiertas.", ideesCta: "Enviar", ideesOk: "¡Gracias! Lo leemos todo.",
+    rowData: "Fecha", rowDataV: "Segundo sábado de septiembre",
+    rowHora: "Horario", rowHoraV: "10.00 – 14.00 · 17.00 – 20.30",
+    rowLloc: "Lugar", rowLlocV: "Les Marines, playa de Nules",
+    rowPreu: "Precio", rowPreuV: "Entrada libre",
+    rowIdioma: "Idioma", rowIdiomaV: "Valenciano y castellano",
+    footAbout: "Asociación ciudadana para la defensa del litoral de Nules y de su arquitectura tradicional junto al mar.",
+    footNav: "Navegación", footSeguix: "Síguenos", legal1: "Aviso legal", legal2: "Privacidad",
+    footNota: "Ejemplo — imágenes y fechas pendientes de confirmación"
+  }
+};
+
+class Component extends DCLogic {
+  state = { dropObert: false, lang: "val", petit: false, menuObert: false, correu: "", idea: "", nomIdea: "", cognomIdea: "", ideaEnviada: false };
+  componentDidMount() {
+    this.onResize = () => {
+      const petit = window.innerWidth < 860;
+      if (petit !== this.state.petit) this.setState({ petit, menuObert: false });
+    };
+    this.onResize();
+    window.addEventListener("resize", this.onResize);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  barra(i) {
+    const obert = this.state.menuObert;
+    const base = { display: "block", width: "22px", height: "1.4px", background: "#1a1a18", transition: "transform .25s ease, opacity .2s ease" };
+    if (i === 1) return { ...base, transform: obert ? "translateY(6px) rotate(45deg)" : "none" };
+    if (i === 2) return { ...base, opacity: obert ? 0 : 1 };
+    return { ...base, transform: obert ? "translateY(-6px) rotate(-45deg)" : "none" };
+  }
+  btn(actiu) {
+    return {
+      fontFamily: "Jost, sans-serif", fontWeight: actiu ? 500 : 300, fontSize: "9px",
+      letterSpacing: ".18em", color: actiu ? "#f5f2ec" : "rgba(245,242,236,.5)",
+      background: "transparent", border: 0, padding: 0, cursor: "pointer", lineHeight: 1
+    };
+  }
+  renderVals() {
+    const t = TXT[this.state.lang] || TXT.val;
+    const setCorreu = (e) => this.setState({ correu: e.target.value, ideaEnviada: false });
+    const setIdea = (e) => this.setState({ idea: e.target.value, ideaEnviada: false });
+    const enviaIdea = (e) => {
+      e.preventDefault();
+      const s = this.state;
+      const cos = "Nom: " + s.nomIdea + " " + s.cognomIdea + "\nCorreu: " + s.correu + "\n\n" + s.idea;
+      window.location.href = "mailto:platgesdenules@gmail.com?subject=" + encodeURIComponent("Casetes obertes — idea de " + (s.nomIdea || "algú")) + "&body=" + encodeURIComponent(cos);
+      this.setState({ ideaEnviada: true, correu: "", idea: "", nomIdea: "", cognomIdea: "" });
+    };
+    const petit = this.state.petit;
+    const correu = this.state.correu, idea = this.state.idea;
+    const nomIdea = this.state.nomIdea, cognomIdea = this.state.cognomIdea;
+    const setNomIdea = (e) => this.setState({ nomIdea: e.target.value, ideaEnviada: false });
+    const setCognomIdea = (e) => this.setState({ cognomIdea: e.target.value, ideaEnviada: false });
+    return {
+      t, correu, idea, nomIdea, cognomIdea, setNomIdea, setCognomIdea, setCorreu, setIdea, enviaIdea, ideaEnviada: this.state.ideaEnviada,
+      menuObert: petit && this.state.menuObert,
+      toggleMenu: () => this.setState({ menuObert: !this.state.menuObert }),
+      tancaMenu: () => this.setState({ menuObert: false }),
+      dropObert: this.state.dropObert,
+      obreDrop: () => this.setState({ dropObert: true }),
+      tancaDrop: () => this.setState({ dropObert: false }),
+      toggleDrop: () => this.setState({ dropObert: false }),
+      navEsq: petit ? { display: "none" } : { flex: "1 1 220px", display: "flex", gap: "26px", flexWrap: "wrap" },
+      navDreta: petit ? { display: "none" } : { flex: "1 1 300px", display: "flex", gap: "18px 26px", justifyContent: "flex-end", alignItems: "center", flexWrap: "wrap" },
+      estilBurger: petit
+        ? { flex: "1 1 0", display: "flex", flexDirection: "column", gap: "5px", alignItems: "flex-start", background: "transparent", border: 0, padding: "8px 0", cursor: "pointer" }
+        : { display: "none" },
+      barra1: this.barra(1), barra2: this.barra(2), barra3: this.barra(3),
+      estilVal: this.btn(this.state.lang === "val"),
+      estilCas: this.btn(this.state.lang === "cas"),
+      setVal: () => this.setState({ lang: "val" }),
+      setCas: () => this.setState({ lang: "cas" })
+    };
+  }
+}
+</script>
+</body>
+</html>

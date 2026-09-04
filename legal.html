@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal — Platges de Nules</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=Jost:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: #f5f2ec; color: #1a1a18; font-family: Jost, system-ui, sans-serif; font-weight: 300; -webkit-font-smoothing: antialiased; }
+  a { color: #1a1a18; text-decoration: none; }
+  a:hover { color: #37798f; }
+  html { scroll-behavior: smooth; }
+</style>
+</helmet>
+
+<div style="max-width:100%;overflow-x:hidden">
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(245,242,236,.94);backdrop-filter:blur(8px)">
+  <div style="max-width:1400px;margin:0 auto;padding:8px 40px 0;display:flex;justify-content:flex-end;align-items:center;gap:14px">
+    <a href="https://www.instagram.com/platgesdenules/" aria-label="Instagram" style="display:block;line-height:0;color:#8a857c" style-hover="color:#1a1a18">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:block">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/platgesdenules/" aria-label="Facebook" style="display:block;line-height:0;color:#8a857c" style-hover="color:#1a1a18">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:block">
+        <path d="M14.8 3.5h-2.3a3.6 3.6 0 0 0-3.6 3.6V10H7v3h1.9v7.5"></path>
+        <path d="M8.9 13h4.4"></path>
+      </svg>
+    </a>
+    <span style="width:1px;height:10px;background:#d4cec1"></span>
+    <a href="mailto:platgesdenules@gmail.com" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#8a857c" style-hover="color:#1a1a18">{{ t.escriuNos }}</a>
+    <span style="display:flex;align-items:center;gap:5px;background:#37798f;border-radius:999px;padding:4px 9px">
+      <button type="button" onClick="{{ setVal }}" style="{{ estilVal }}">VAL</button>
+      <span style="font-size:9px;color:rgba(245,242,236,.4)">/</span>
+      <button type="button" onClick="{{ setCas }}" style="{{ estilCas }}">CAS</button>
+    </span>
+  </div>
+  <div style="max-width:1400px;margin:0 auto;padding:10px 40px 22px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 26px">
+    <nav style="{{ navEsq }}">
+      <a href="casetes-obertes.html" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase">{{ t.navCasetes }}</a>
+      <span onMouseEnter="{{ obreDrop }}" onMouseLeave="{{ tancaDrop }}" style="position:relative;display:inline-flex;align-items:center">
+        <a href="patrimoni.html" onClick="{{ toggleDrop }}" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase">{{ t.navProblema }}</a>
+        <sc-if value="{{ dropObert }}" hint-placeholder-val="{{ false }}">
+          <span style="position:absolute;top:100%;left:0;padding-top:12px;display:flex;flex-direction:column;min-width:172px;z-index:60">
+            <span style="display:flex;flex-direction:column;background:#f5f2ec;border:1px solid #ddd8cd;box-shadow:0 10px 30px rgba(26,26,24,.09)">
+              <a href="patrimoni.html#cultura" onClick="{{ tancaDrop }}" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px 16px;border-bottom:1px solid #e7e2d8;color:#4a4740" style-hover="background:#ece7dd;color:#1a1a18">{{ t.navCultural }}</a>
+              <a href="patrimoni.html#natural" onClick="{{ tancaDrop }}" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px 16px;color:#4a4740" style-hover="background:#ece7dd;color:#1a1a18">{{ t.navNatura }}</a>
+            </span>
+          </span>
+        </sc-if>
+      </span>
+    </nav>
+    <button type="button" onClick="{{ toggleMenu }}" aria-label="Menu" style="{{ estilBurger }}">
+      <span style="{{ barra1 }}"></span>
+      <span style="{{ barra2 }}"></span>
+      <span style="{{ barra3 }}"></span>
+    </button>
+    <a href="index.html" style="flex:0 0 auto;display:block;line-height:0"><img src="logo-platges-nules-trim.png" alt="Platges de Nules" style="display:block;height:46px;width:auto;filter:invert(.74)"></a>
+    <nav style="{{ navDreta }}">
+      <a href="index.html#actualitat" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase">{{ t.navActualitat }}</a>
+      <a href="index.html#marnostra" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase">Mar Nostra</a>
+      <a href="index.html#sumat" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase">{{ t.navSumat }}</a>
+    </nav>
+    <sc-if value="{{ menuObert }}" hint-placeholder-val="{{ false }}">
+      <nav style="flex:1 1 100%;display:flex;flex-direction:column;gap:2px;padding:14px 0 4px;border-top:1px solid #ddd8cd">
+        <a href="casetes-obertes.html" onClick="{{ tancaMenu }}" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:13px 0;border-bottom:1px solid #e7e2d8">{{ t.navCasetes }}</a>
+        <a href="patrimoni.html" onClick="{{ tancaMenu }}" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:13px 0;border-bottom:1px solid #e7e2d8">{{ t.navProblema }}</a>
+        <a href="patrimoni.html#cultura" onClick="{{ tancaMenu }}" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:11px 0 11px 18px;color:#6d6155;border-bottom:1px solid #e7e2d8">{{ t.navCultural }}</a>
+        <a href="patrimoni.html#natural" onClick="{{ tancaMenu }}" style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding:11px 0 11px 18px;color:#6d6155;border-bottom:1px solid #e7e2d8">{{ t.navNatura }}</a>
+        <a href="index.html#actualitat" onClick="{{ tancaMenu }}" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:13px 0;border-bottom:1px solid #e7e2d8">{{ t.navActualitat }}</a>
+        <a href="index.html#sumat" onClick="{{ tancaMenu }}" style="font-size:12px;letter-spacing:.22em;text-transform:uppercase;padding:13px 0">{{ t.navSumat }}</a>
+      </nav>
+    </sc-if>
+  </div>
+</header>
+
+<section id="dalt" style="padding:clamp(48px,7vw,96px) 40px clamp(24px,3vw,40px)">
+  <div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:22px">
+    <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.eyebrow }}</span>
+    <h1 style="margin:0;max-width:20ch;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,5.6vw,72px);line-height:1.06;text-wrap:pretty">{{ t.titol }}</h1>
+    <nav style="display:flex;flex-wrap:wrap;gap:12px 26px;padding-top:6px">
+      <a href="#avis" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid #c9c2b4;padding-bottom:5px" style-hover="border-color:#1a1a18">{{ t.s1 }}</a>
+      <a href="#privacitat" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid #c9c2b4;padding-bottom:5px" style-hover="border-color:#1a1a18">{{ t.s2 }}</a>
+      <a href="#cookies" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid #c9c2b4;padding-bottom:5px" style-hover="border-color:#1a1a18">{{ t.s3 }}</a>
+    </nav>
+  </div>
+</section>
+
+<section id="avis" style="padding:clamp(36px,5vw,64px) 40px;scroll-margin-top:150px">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,5vw,80px);align-items:start;border-top:1px solid #ddd8cd;padding-top:clamp(30px,4vw,52px)">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">01</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.12">{{ t.s1 }}</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;max-width:62ch">
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.avis1 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.avis2 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.avis3 }}</p>
+      <ul style="margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #d4cec1">
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dTitular }}</span><span>Associació Platges de Nules</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dNif }}</span><span>—</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dAdreca }}</span><span>—</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dCorreu }}</span><span>—</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dRegistre }}</span><span>—</span></li>
+      </ul>
+      <p style="margin:0;font-size:12px;letter-spacing:.06em;color:#8a857c">{{ t.dNota }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="privacitat" style="padding:clamp(36px,5vw,64px) 40px;scroll-margin-top:150px">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,5vw,80px);align-items:start;border-top:1px solid #ddd8cd;padding-top:clamp(30px,4vw,52px)">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">02</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.12">{{ t.s2 }}</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;max-width:62ch">
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.priv1 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.priv2 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.priv3 }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="cookies" style="padding:clamp(36px,5vw,64px) 40px clamp(48px,7vw,90px);scroll-margin-top:150px">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,5vw,80px);align-items:start;border-top:1px solid #ddd8cd;padding-top:clamp(30px,4vw,52px)">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">03</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.12">{{ t.s3 }}</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;max-width:62ch">
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.cook1 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.cook2 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.cook3 }}</p>
+    </div>
+  </div>
+</section>
+
+<footer style="padding:clamp(48px,6vw,80px) 40px 34px;background:#ece7dd">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(28px,4vw,60px)">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#37798f">PLATGES DE NULES</span>
+      <p style="margin:0;max-width:34ch;font-size:14px;line-height:1.8;color:#6d6155">{{ t.footAbout }}</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.footNav }}</span>
+      <a href="patrimoni.html" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.navProblema }}</a>
+      <a href="casetes-obertes.html" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.navCasetes }}</a>
+      <a href="index.html#actualitat" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.navActualitat }}</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.footSeguix }}</span>
+      <a href="https://www.instagram.com/platgesdenules/" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Instagram</a>
+      <a href="https://www.facebook.com/platgesdenules/" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Facebook</a>
+      <a href="mailto:platgesdenules@gmail.com" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.escriuNos }}</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">Legal</span>
+      <a href="#avis" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.s1 }}</a>
+      <a href="#privacitat" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.s2 }}</a>
+      <a href="#cookies" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Cookies</a>
+    </div>
+  </div>
+  <div style="max-width:1400px;margin:22px auto 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#37798f">
+    <span>© 2026 Associació Platges de Nules</span>
+    <span>{{ t.footNota }}</span>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const TXT = {
+  val: {
+    escriuNos: "Escriu-nos", navProblema: "Patrimoni", navCultural: "Cultural", navNatura: "Natural", navCasetes: "Casetes obertes",
+    navActualitat: "Actualitat", navSumat: "Suma't",
+    eyebrow: "Informació legal", titol: "Avís legal, privacitat i cookies",
+    s1: "Avís legal", s2: "Privacitat", s3: "Cookies",
+    avis1: "Este lloc web és titularitat de l'Associació Platges de Nules, entitat sense ànim de lucre dedicada a la defensa del litoral i del patrimoni cultural i natural de Nules.",
+    avis2: "Els continguts, textos i imatges publicats són propietat de l'associació o dels seus autors, i es poden reproduir sense ànim comercial citant-ne la procedència.",
+    avis3: "L'associació no es fa responsable de l'ús que es faça de la informació ni dels continguts allotjats en llocs externs enllaçats des d'estes pàgines.",
+    priv1: "Les dades que ens deixes als formularis (nom, cognoms, correu i el text que ens escrigues) s'utilitzen únicament per a respondre't i per a avisar-te de les activitats i mobilitzacions de l'associació.",
+    priv2: "No cedim les teues dades a tercers ni les fem servir per a cap finalitat comercial. Les conservem mentre continues en la llista de contactes.",
+    priv3: "Pots accedir a les teues dades, rectificar-les o demanar-ne la supressió escrivint-nos en qualsevol moment; te'n donarem de baixa immediatament.",
+    cook1: "Este lloc no fa servir cookies de publicitat ni de perfilat. Només s'utilitzen les cookies tècniques imprescindibles perquè la pàgina funcione (per exemple, recordar l'idioma triat).",
+    cook2: "Si en el futur incorporem eines de mesura de visites, s'avisarà de manera clara i es podrà acceptar o rebutjar abans que s'activen.",
+    cook3: "Pots esborrar o bloquejar les cookies des de la configuració del teu navegador en qualsevol moment.",
+    footAbout: "Associació ciutadana per a la defensa del litoral de Nules i de la seua arquitectura tradicional de vora mar.",
+    dTitular: "Titular", dNif: "NIF", dAdreca: "Adreça", dCorreu: "Correu", dRegistre: "Registre d'associacions",
+    dNota: "Completa estes dades amb la informació real de l'associació.",
+    footNav: "Navegació", footSeguix: "Seguix-nos",
+    footNota: "Text orientatiu — pendent de revisió jurídica"
+  },
+  cas: {
+    escriuNos: "Escríbenos", navProblema: "Patrimonio", navCultural: "Cultural", navNatura: "Natural", navCasetes: "Casetas abiertas",
+    navActualitat: "Actualidad", navSumat: "Súmate",
+    eyebrow: "Información legal", titol: "Aviso legal, privacidad y cookies",
+    s1: "Aviso legal", s2: "Privacidad", s3: "Cookies",
+    avis1: "Este sitio web es titularidad de la Asociación Platges de Nules, entidad sin ánimo de lucro dedicada a la defensa del litoral y del patrimonio cultural y natural de Nules.",
+    avis2: "Los contenidos, textos e imágenes publicados son propiedad de la asociación o de sus autores, y pueden reproducirse sin ánimo comercial citando su procedencia.",
+    avis3: "La asociación no se hace responsable del uso que se haga de la información ni de los contenidos alojados en sitios externos enlazados desde estas páginas.",
+    priv1: "Los datos que nos dejas en los formularios (nombre, apellidos, correo y el texto que nos escribas) se utilizan únicamente para responderte y para avisarte de las actividades y movilizaciones de la asociación.",
+    priv2: "No cedemos tus datos a terceros ni los usamos con ninguna finalidad comercial. Los conservamos mientras sigas en la lista de contactos.",
+    priv3: "Puedes acceder a tus datos, rectificarlos o pedir su supresión escribiéndonos en cualquier momento; te daremos de baja de inmediato.",
+    cook1: "Este sitio no usa cookies de publicidad ni de perfilado. Solo se utilizan las cookies técnicas imprescindibles para que la página funcione (por ejemplo, recordar el idioma elegido).",
+    cook2: "Si en el futuro incorporamos herramientas de medición de visitas, se avisará de forma clara y se podrá aceptar o rechazar antes de que se activen.",
+    cook3: "Puedes borrar o bloquear las cookies desde la configuración de tu navegador en cualquier momento.",
+    footAbout: "Asociación ciudadana para la defensa del litoral de Nules y de su arquitectura tradicional junto al mar.",
+    dTitular: "Titular", dNif: "NIF", dAdreca: "Dirección", dCorreu: "Correo", dRegistre: "Registro de asociaciones",
+    dNota: "Completa estos datos con la información real de la asociación.",
+    footNav: "Navegación", footSeguix: "Síguenos",
+    footNota: "Texto orientativo — pendiente de revisión jurídica"
+  }
+};
+
+class Component extends DCLogic {
+  state = { dropObert: false, lang: "val", petit: false, menuObert: false };
+  componentDidMount() {
+    this.onResize = () => {
+      const petit = window.innerWidth < 860;
+      if (petit !== this.state.petit) this.setState({ petit, menuObert: false });
+    };
+    this.onResize();
+    window.addEventListener("resize", this.onResize);
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this.onResize); }
+  barra(i) {
+    const obert = this.state.menuObert;
+    const base = { display: "block", width: "22px", height: "1.4px", background: "#1a1a18", transition: "transform .25s ease, opacity .2s ease" };
+    if (i === 1) return { ...base, transform: obert ? "translateY(6px) rotate(45deg)" : "none" };
+    if (i === 2) return { ...base, opacity: obert ? 0 : 1 };
+    return { ...base, transform: obert ? "translateY(-6px) rotate(-45deg)" : "none" };
+  }
+  btn(actiu) {
+    return {
+      fontFamily: "Jost, sans-serif", fontWeight: actiu ? 500 : 300, fontSize: "9px",
+      letterSpacing: ".18em", color: actiu ? "#f5f2ec" : "rgba(245,242,236,.5)",
+      background: "transparent", border: 0, padding: 0, cursor: "pointer", lineHeight: 1
+    };
+  }
+  renderVals() {
+    const petit = this.state.petit;
+    return {
+      t: TXT[this.state.lang] || TXT.val,
+      menuObert: petit && this.state.menuObert,
+      toggleMenu: () => this.setState({ menuObert: !this.state.menuObert }),
+      tancaMenu: () => this.setState({ menuObert: false }),
+      dropObert: this.state.dropObert,
+      obreDrop: () => this.setState({ dropObert: true }),
+      tancaDrop: () => this.setState({ dropObert: false }),
+      toggleDrop: () => this.setState({ dropObert: false }),
+      navEsq: petit ? { display: "none" } : { flex: "1 1 220px", display: "flex", gap: "26px", flexWrap: "wrap" },
+      navDreta: petit ? { display: "none" } : { flex: "1 1 300px", display: "flex", gap: "18px 26px", justifyContent: "flex-end", alignItems: "center", flexWrap: "wrap" },
+      estilBurger: petit
+        ? { flex: "1 1 0", display: "flex", flexDirection: "column", gap: "5px", alignItems: "flex-start", background: "transparent", border: 0, padding: "8px 0", cursor: "pointer" }
+        : { display: "none" },
+      barra1: this.barra(1), barra2: this.barra(2), barra3: this.barra(3),
+      estilVal: this.btn(this.state.lang === "val"),
+      estilCas: this.btn(this.state.lang === "cas"),
+      setVal: () => this.setState({ lang: "val" }),
+      setCas: () => this.setState({ lang: "cas" })
+    };
+  }
+}
+</script>
+</body>
+</html>
