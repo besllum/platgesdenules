@@ -1,0 +1,8 @@
+{
+  "name": "platgesdenules",
+  "private": true,
+  "description": "Web de l'Associació Platges de Nules (platgesdenules.es)",
+  "type": "module",
+  "scripts": { "build": "node build.mjs" },
+  "engines": { "node": ">=18" }
+}

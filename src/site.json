@@ -1,0 +1,87 @@
+{
+  "baseUrl": "https://platgesdenules.es",
+  "siteName": "Platges de Nules",
+  "orgName": "Associació Platges de Nules",
+  "email": "platgesdenules@gmail.com",
+  "instagram": "https://www.instagram.com/platgesdenules/",
+  "facebook": "https://www.facebook.com/platgesdenules/",
+  "langs": {
+    "ca": { "label": "VAL", "htmlLang": "ca-ES-valencia", "hreflang": "ca-ES", "ogLocale": "ca_ES", "prefix": "" },
+    "es": { "label": "CAS", "htmlLang": "es-ES", "hreflang": "es-ES", "ogLocale": "es_ES", "prefix": "/es" }
+  },
+  "defaultLang": "ca",
+  "pages": {
+    "home": {
+      "template": "index.html",
+      "slug": { "ca": "", "es": "" },
+      "image": "/img/og-inici.jpg",
+      "priority": "1.0",
+      "meta": {
+        "ca": {
+          "title": "Platges de Nules · Patrimoni cultural i natural de Nules Platja",
+          "description": "Associació per la defensa del patrimoni cultural i natural de Nules Platja: les casetes de la mar, la platja, el marjal, l'horta i més de 100 anys d'història."
+        },
+        "es": {
+          "title": "Platges de Nules · Patrimonio cultural y natural de Nules Playa",
+          "description": "Asociación para la defensa del patrimonio cultural y natural de la playa de Nules: las casetas del mar, la playa, el marjal, la huerta y más de 100 años de historia."
+        }
+      }
+    },
+    "patrimoni": {
+      "template": "patrimoni.html",
+      "slug": { "ca": "patrimoni", "es": "patrimonio" },
+      "image": "/img/og-patrimoni.jpg",
+      "priority": "0.9",
+      "meta": {
+        "ca": {
+          "title": "Patrimoni: casetes, arquitectura i natura de Nules | Platges de Nules",
+          "description": "El patrimoni cultural i natural de Nules Platja: la història de les casetes de la mar, la seua arquitectura tradicional i la natura del litoral, entre dunes, marjal i mar."
+        },
+        "es": {
+          "title": "Patrimonio: casetas, arquitectura y naturaleza de Nules | Platges de Nules",
+          "description": "El patrimonio cultural y natural de la playa de Nules: la historia de las casetas del mar, su arquitectura tradicional y la naturaleza del litoral, entre dunas, marjal y mar."
+        }
+      }
+    },
+    "casetes": {
+      "template": "casetes-obertes.html",
+      "slug": { "ca": "casetes-obertes", "es": "casetas-abiertas" },
+      "image": "/img/og-casetes-obertes.jpg",
+      "priority": "0.9",
+      "meta": {
+        "ca": {
+          "title": "Casetes obertes: les casetes de Nules obrin la porta | Platges de Nules",
+          "description": "Casetes obertes és la jornada en què els propietaris obrin les seues casetes de vora mar a Nules: porxos, emparrats i cuines d'estiu. Cartells de les cinc edicions."
+        },
+        "es": {
+          "title": "Casetas abiertas: las casetas de Nules abren sus puertas | Platges de Nules",
+          "description": "Casetas abiertas es la jornada en que los propietarios abren sus casetas junto al mar en Nules: porches, emparrados y cocinas de verano. Carteles de las cinco ediciones."
+        }
+      }
+    },
+    "legal": {
+      "template": "legal.html",
+      "slug": { "ca": "legal", "es": "legal" },
+      "image": "/img/og-inici.jpg",
+      "noindex": true,
+      "meta": {
+        "ca": {
+          "title": "Avís legal, privacitat i cookies | Platges de Nules",
+          "description": "Informació legal, política de privacitat i ús de cookies del lloc web de l'Associació Platges de Nules."
+        },
+        "es": {
+          "title": "Aviso legal, privacidad y cookies | Platges de Nules",
+          "description": "Información legal, política de privacidad y uso de cookies del sitio web de la Asociación Platges de Nules."
+        }
+      }
+    }
+  },
+  "pobles": [
+    { "nom": "Almassora", "assoc": ["AV Platja d'Almassora", "AV Torre de la Reina", "Amics del Litoral d'Almassora"] },
+    { "nom": "Borriana", "assoc": ["AV Serratella – Borriana", "Plataforma Salvem la Platja de Borriana"] },
+    { "nom": "Nules", "assoc": ["Associació Platges de Nules"], "nosaltres": true },
+    { "nom": "Xilxes", "assoc": ["AV Platja de Xilxes"] },
+    { "nom": "Moncofa", "assoc": ["AV Masbò", "AV Beniesma", "AV Platja de Moncofa"] },
+    { "nom": "Almenara", "assoc": ["AV Casablanca", "AV Platja d'Almenara"] }
+  ]
+}

@@ -1,0 +1,65 @@
+{{> header}}
+<main id="contingut">
+<section id="dalt" style="padding:clamp(48px,7vw,96px) 40px clamp(24px,3vw,40px)">
+  <div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:22px">
+    <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.eyebrow }}</span>
+    <h1 style="margin:0;max-width:20ch;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,5.6vw,72px);line-height:1.06;text-wrap:pretty">{{ t.titol }}</h1>
+    <nav style="display:flex;flex-wrap:wrap;gap:12px 26px;padding-top:6px">
+      <a href="#avis" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid #c9c2b4;padding-bottom:5px" style-hover="border-color:#1a1a18">{{ t.s1 }}</a>
+      <a href="#privacitat" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid #c9c2b4;padding-bottom:5px" style-hover="border-color:#1a1a18">{{ t.s2 }}</a>
+      <a href="#cookies" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid #c9c2b4;padding-bottom:5px" style-hover="border-color:#1a1a18">{{ t.s3 }}</a>
+    </nav>
+  </div>
+</section>
+
+<section id="avis" style="padding:clamp(36px,5vw,64px) 40px;scroll-margin-top:150px">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,5vw,80px);align-items:start;border-top:1px solid #ddd8cd;padding-top:clamp(30px,4vw,52px)">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">01</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.12">{{ t.s1 }}</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;max-width:62ch">
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.avis1 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.avis2 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.avis3 }}</p>
+      <ul style="margin:8px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #d4cec1">
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dTitular }}</span><span>Associació Platges de Nules</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dNif }}</span><span>—</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dAdreca }}</span><span>—</span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dCorreu }}</span><span><a href="mailto:platgesdenules@gmail.com" style="color:inherit">platgesdenules@gmail.com</a></span></li>
+        <li style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;padding:14px 0;border-bottom:1px solid #d4cec1;font-size:13px;letter-spacing:.08em;color:#4a4740"><span style="text-transform:uppercase;font-size:11px;letter-spacing:.2em;color:#8a857c">{{ t.dRegistre }}</span><span>—</span></li>
+      </ul>
+      <p style="margin:0;font-size:12px;letter-spacing:.06em;color:#8a857c">{{ t.dNota }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="privacitat" style="padding:clamp(36px,5vw,64px) 40px;scroll-margin-top:150px">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,5vw,80px);align-items:start;border-top:1px solid #ddd8cd;padding-top:clamp(30px,4vw,52px)">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">02</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.12">{{ t.s2 }}</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;max-width:62ch">
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.priv1 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.priv2 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.priv3 }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="cookies" style="padding:clamp(36px,5vw,64px) 40px clamp(48px,7vw,90px);scroll-margin-top:150px">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,5vw,80px);align-items:start;border-top:1px solid #ddd8cd;padding-top:clamp(30px,4vw,52px)">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">03</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(28px,3.4vw,46px);line-height:1.12">{{ t.s3 }}</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:18px;max-width:62ch">
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.cook1 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.cook2 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.cook3 }}</p>
+    </div>
+  </div>
+</section>
+</main>
+{{> footer}}

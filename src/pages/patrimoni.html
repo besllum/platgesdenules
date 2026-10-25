@@ -1,0 +1,173 @@
+{{> header}}
+<main id="contingut">
+<section id="dalt" style="position:relative">
+  <h1 class="sr-only">{{ t.h1 }}</h1>
+  <div data-slider style="position:relative;width:100%;aspect-ratio:3368/2124;max-height:900px;overflow:hidden;background:#e7e2d8">
+    <div class="slide on" data-slide style="transition-duration:.6s"><span style="position:absolute;inset:0;display:block"><img src="/img/hero-slide-3.webp" srcset="/img/hero-slide-3-800.webp 800w, /img/hero-slide-3.webp 1200w" sizes="100vw" alt="{{ t.alt.hero3 }}" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+    <div class="slide" data-slide style="transition-duration:.6s"><span style="position:absolute;inset:0;display:block"><img src="/img/hero-slide-2.webp" srcset="/img/hero-slide-2-800.webp 800w, /img/hero-slide-2.webp 1200w" sizes="100vw" alt="{{ t.alt.hero2 }}" style="width:100%;height:100%;object-fit:cover;display:block"><svg aria-hidden="true" width="207" height="8" viewBox="0 0 207 8" preserveAspectRatio="none" style="position: absolute; left: 38.47%; top: 57.2%; width: 14.375%; height: 8px; overflow: visible; fill: none; stroke: #8a8378; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round"><path d="M 0 2 L 207 6"></path></svg></span></div>
+    <button type="button" data-prev aria-label="{{ t.anterior }}" style="position:absolute;left:18px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;background:rgba(245,242,236,.82);border:0;border-radius:999px;cursor:pointer;color:#1a1a18;font-size:18px;line-height:1" style-hover="background:#f5f2ec">‹</button>
+    <button type="button" data-next aria-label="{{ t.seguent }}" style="position:absolute;right:18px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;background:rgba(245,242,236,.82);border:0;border-radius:999px;cursor:pointer;color:#1a1a18;font-size:18px;line-height:1" style-hover="background:#f5f2ec">›</button>
+    <div style="position:absolute;left:0;right:0;bottom:20px;display:flex;justify-content:center;gap:9px">
+      <button type="button" class="hdot on" data-dot aria-label="{{ t.foto }} 1"></button>
+        <button type="button" class="hdot" data-dot aria-label="{{ t.foto }} 2"></button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="cultura" style="padding:0 40px clamp(72px,10vw,130px);scroll-margin-top:140px">
+  <div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,4vw,48px);padding-top:clamp(36px,5vw,64px)">
+    <div style="display:flex;flex-direction:column;gap:clamp(20px,2.6vw,32px)">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.culEyebrow }}</span>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,46px);line-height:1.12">{{ t.culTitle }}</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:none">
+        <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty;white-space:pre-line">{{ t.culP1 }}</p>
+        <p id="mes-cul" data-more-item="cul" hidden style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty;white-space:pre-line">{{ t.culP2 }}</p>
+        <button type="button" data-more="cul" aria-expanded="false" aria-controls="mes-cul" data-label-more="{{ t.llegirMes }}" data-label-less="{{ t.llegirMenys }}" style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:transparent;border:0;padding:0;cursor:pointer;font-family:Jost,sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#37798f">
+          <span class="rot" style="display:inline-block;font-size:15px;line-height:1" aria-hidden="true">+</span><span data-label>{{ t.llegirMes }}</span>
+        </button>
+        <p style="margin:0;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8a857c">{{ t.culAutor }}</p>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(18px,2.4vw,30px)">
+      <div style="position:relative;width:100%;aspect-ratio:3/2;background:#e7e2d8">
+        <span style="position:absolute;inset:0;display:block"></span>
+      </div>
+      <div style="position:relative;width:100%;aspect-ratio:3/2;background:#e7e2d8">
+        <span style="position:absolute;inset:0;display:block"></span>
+      </div>
+      <div style="position:relative;width:100%;aspect-ratio:3/2;background:#e7e2d8">
+        <span style="position:absolute;inset:0;display:block"></span>
+      </div>
+    </div>
+  </div>
+</section><section id="arquitectura" style="padding:0 40px clamp(72px,10vw,130px);scroll-margin-top:140px">
+  <div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,4vw,48px);border-top:1px solid #ddd8cd;padding-top:clamp(36px,5vw,64px)">
+    <div style="display:flex;flex-direction:column;gap:clamp(20px,2.6vw,32px)">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.arqEyebrow }}</span>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,46px);line-height:1.12">{{ t.arqTitle }}</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:none">
+        <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.arqP1 }}</p>
+        <p id="mes-arq" data-more-item="arq" hidden style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.arqP2 }}</p>
+        <button type="button" data-more="arq" aria-expanded="false" aria-controls="mes-arq" data-label-more="{{ t.llegirMes }}" data-label-less="{{ t.llegirMenys }}" style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:transparent;border:0;padding:0;cursor:pointer;font-family:Jost,sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#37798f">
+          <span class="rot" style="display:inline-block;font-size:15px;line-height:1" aria-hidden="true">+</span><span data-label>{{ t.llegirMes }}</span>
+        </button>
+      </div>
+    </div>
+    <div data-arq data-caps="{{json t.arqCaps}}" style="position:relative">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,2.4vw,32px);align-items:start">
+        <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+          <div data-arq-col style="position:relative;width:100%;aspect-ratio:4/7;overflow:hidden;background:#e7e2d8">
+            <div class="slide on" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-1.webp" alt="{{ t.alt.arq.0 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-2.webp" alt="{{ t.alt.arq.1 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-3.webp" alt="{{ t.alt.arq.2 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-4.webp" alt="{{ t.alt.arq.3 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-5.webp" alt="{{ t.alt.arq.4 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-6.webp" alt="{{ t.alt.arq.5 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-7.webp" alt="{{ t.alt.arq.6 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#4a4740;min-height:1.6em" data-arq-cap>{{ t.arqCaps.0 }}</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+          <div data-arq-col style="position:relative;width:100%;aspect-ratio:4/7;overflow:hidden;background:#e7e2d8">
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-1.webp" alt="{{ t.alt.arq.0 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide on" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-2.webp" alt="{{ t.alt.arq.1 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-3.webp" alt="{{ t.alt.arq.2 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-4.webp" alt="{{ t.alt.arq.3 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-5.webp" alt="{{ t.alt.arq.4 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-6.webp" alt="{{ t.alt.arq.5 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-7.webp" alt="{{ t.alt.arq.6 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#4a4740;min-height:1.6em" data-arq-cap>{{ t.arqCaps.1 }}</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+          <div data-arq-col style="position:relative;width:100%;aspect-ratio:4/7;overflow:hidden;background:#e7e2d8">
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-1.webp" alt="{{ t.alt.arq.0 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-2.webp" alt="{{ t.alt.arq.1 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide on" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-3.webp" alt="{{ t.alt.arq.2 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-4.webp" alt="{{ t.alt.arq.3 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-5.webp" alt="{{ t.alt.arq.4 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-6.webp" alt="{{ t.alt.arq.5 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+            <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/arq-7.webp" alt="{{ t.alt.arq.6 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#4a4740;min-height:1.6em" data-arq-cap>{{ t.arqCaps.2 }}</p>
+        </div>
+      </div>
+    <button type="button" data-prev aria-label="{{ t.anterior }}" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:34px;height:34px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.9);cursor:pointer;color:#1a1a18;font-size:16px;line-height:1;z-index:3" style-hover="background:#f5f2ec">‹</button>
+    <button type="button" data-next aria-label="{{ t.seguent }}" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:34px;height:34px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.9);cursor:pointer;color:#1a1a18;font-size:16px;line-height:1;z-index:3" style-hover="background:#f5f2ec">›</button>
+      <div style="position:absolute;left:0;right:0;bottom:calc(1.6em + 24px);display:flex;justify-content:center;z-index:3"><span style="display:flex;gap:6px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(245,242,236,.9)"><span class="dot on" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span></span></div>
+    </div>
+    <p style="margin:0;align-self:flex-end;text-align:right;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8a857c">©SANTIAGO CARREGUÍ</p>
+  </div>
+</section><section id="natural" style="padding:0 40px clamp(72px,10vw,130px);scroll-margin-top:140px">
+  
+<div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(28px,4vw,48px);border-top:1px solid #ddd8cd;padding-top:clamp(36px,5vw,64px)">
+    <div style="display:flex;flex-direction:column;gap:clamp(20px,2.6vw,32px)">
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.natEyebrow }}</span>
+        <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,46px);line-height:1.12">{{ t.natTitle }}</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:18px;max-width:none">
+        <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.natP1 }}</p>
+        <p id="mes-nat" data-more-item="nat" hidden style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.natP2 }}</p>
+        <button type="button" data-more="nat" aria-expanded="false" aria-controls="mes-nat" data-label-more="{{ t.llegirMes }}" data-label-less="{{ t.llegirMenys }}" style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:transparent;border:0;padding:0;cursor:pointer;font-family:Jost,sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#37798f">
+          <span class="rot" style="display:inline-block;font-size:15px;line-height:1" aria-hidden="true">+</span><span data-label>{{ t.llegirMes }}</span>
+        </button>
+        <p style="margin:0;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8a857c">{{ t.natAutor }}</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(18px,2.4vw,32px);align-items:start;margin-top:8px">
+        <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+          <div data-slider style="position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:#e7e2d8">
+          <div class="slide on" data-slide><img src="/img/nat1-a.webp" alt="{{ t.alt.nat.0 }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="slide" data-slide><img src="/img/nat1-b.webp" alt="{{ t.alt.nat.1 }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="slide" data-slide><img src="/img/nat1-c.webp" alt="{{ t.alt.nat.2 }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="slide" data-slide><img src="/img/nat1-d.webp" alt="{{ t.alt.nat.3 }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="slide" data-slide><img src="/img/nat1-e.webp" alt="{{ t.alt.nat.4 }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+          <div class="slide" data-slide><img src="/img/nat1-f.webp" alt="{{ t.alt.nat.5 }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+            <button type="button" data-prev aria-label="{{ t.anterior }}" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.85);cursor:pointer;color:#1a1a18;font-size:15px;line-height:1;z-index:2" style-hover="background:#f5f2ec">‹</button>
+            <button type="button" data-next aria-label="{{ t.seguent }}" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.85);cursor:pointer;color:#1a1a18;font-size:15px;line-height:1;z-index:2" style-hover="background:#f5f2ec">›</button>
+            <div style="position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;z-index:2"><span style="display:flex;gap:6px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(245,242,236,.85)"><span class="dot on" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span></span></div>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#4a4740;min-height:1.6em">{{ t.natCap1 }}</p>
+          <p style="margin:0;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8a857c;min-height:1.3em">{{ t.natAut1 }}</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+          <div data-slider style="position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:#e7e2d8">
+          <div class="slide on" data-slide><span style="position:absolute;inset:0;display:block"></span></div>
+          <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"></span></div>
+          <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"></span></div>
+          <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"></span></div>
+          <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"></span></div>
+          <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"></span></div>
+            <button type="button" data-prev aria-label="{{ t.anterior }}" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.85);cursor:pointer;color:#1a1a18;font-size:15px;line-height:1;z-index:2" style-hover="background:#f5f2ec">‹</button>
+            <button type="button" data-next aria-label="{{ t.seguent }}" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.85);cursor:pointer;color:#1a1a18;font-size:15px;line-height:1;z-index:2" style-hover="background:#f5f2ec">›</button>
+            <div style="position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;z-index:2"><span style="display:flex;gap:6px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(245,242,236,.85)"><span class="dot on" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span><span class="dot" data-dot style="width:6px;height:6px"></span></span></div>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#4a4740;min-height:1.6em">{{ t.natCap2 }}</p>
+          <p style="margin:0;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8a857c;min-height:1.3em">{{ t.natAut2 }}</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;min-width:0">
+          <div style="position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:#e7e2d8">
+          <div style="position:absolute;inset:0;overflow:hidden"><div data-yt="BF0rpKGEXqU" data-yt-params="autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=BF0rpKGEXqU&amp;controls=0&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;showinfo=0&amp;disablekb=1&amp;iv_load_policy=3&amp;fs=0" data-yt-style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(1.3);width:100%;aspect-ratio:9/16;min-width:100%;min-height:100%;border:0;pointer-events:none" data-yt-lazy></div></div></div>
+          <p style="margin:0;font-size:14px;line-height:1.6;color:#4a4740;min-height:1.6em">{{ t.natCap3 }}</p>
+          <p style="margin:0;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8a857c;min-height:1.3em">{{ t.natAut3 }}</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    
+  </div></section>
+</main>
+{{> footer}}

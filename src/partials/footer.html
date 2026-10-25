@@ -1,0 +1,30 @@
+<footer style="padding:clamp(56px,7vw,90px) 40px 34px">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;padding-bottom:40px;border-bottom:1px solid #ddd8cd">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:20px;letter-spacing:.24em;text-transform:uppercase;color:#37798F">PLATGES DE NULES</span>
+      <p style="margin:0;max-width:34ch;font-size:14px;line-height:1.8;color:#6d6155">{{ t.footAbout }}</p>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:14px" aria-label="{{ t.footNav }}">
+      <span style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.footNav }}</span>
+      <a href="{{ url.casetes }}" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.navCasetes }}</a>
+      <a href="{{ url.patrimoni }}" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.navProblema }}</a>
+      <a href="{{ url.home }}#marnostra" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Mar Nostra</a>
+      <a href="{{ url.home }}#actualitat" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.navActualitat }}</a>
+    </nav>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.footSeguix }}</span>
+      <a href="https://www.instagram.com/platgesdenules/" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Instagram</a>
+      <a href="https://www.facebook.com/platgesdenules/" target="_blank" rel="noopener" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Facebook</a>
+      <a href="mailto:platgesdenules@gmail.com" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.escriuNos }}</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">Legal</span>
+      <a href="{{ url.legal }}#avis" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.legal1 }}</a>
+      <a href="{{ url.legal }}#privacitat" style="font-size:13px;letter-spacing:.1em;color:#4a4740">{{ t.legal2 }}</a>
+      <a href="{{ url.legal }}#cookies" style="font-size:13px;letter-spacing:.1em;color:#4a4740">Cookies</a>
+    </div>
+  </div>
+  <div style="max-width:1400px;margin:22px auto 0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#8a857c">
+    <span>© 2026 Associació Platges de Nules</span>
+  </div>
+</footer>

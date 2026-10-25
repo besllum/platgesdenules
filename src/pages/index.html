@@ -1,0 +1,294 @@
+{{> header}}
+<main id="contingut">
+<section id="dalt" style="position:relative">
+  <div style="position:relative;height:min(72vh,660px)">
+    <img src="/img/hero-casetes-1920.webp" srcset="/img/hero-casetes-800.webp 800w, /img/hero-casetes-1280.webp 1280w, /img/hero-casetes-1920.webp 1920w" sizes="100vw" alt="{{ t.alt.heroCasetes }}" fetchpriority="high" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+  </div>
+  <div style="max-width:1400px;margin:0 auto;padding:56px 40px 0;display:flex;flex-direction:column;gap:24px">
+    <h1 style="margin: 0; font-size: clamp(34px,3.6vw,52px); font-family: 'Cormorant Garamond', serif; font-weight: 300; line-height: 1.04; color: #1a1a18; text-wrap: pretty"><span class="sr-only">Platges de Nules · </span>{{ t.kickerLine }}</h1>
+  </div>
+  <div style="max-width:1400px;margin:0 auto;padding:clamp(48px,6vw,80px) 40px 0;display:flex;flex-direction:column;gap:clamp(20px,2.6vw,32px)">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.edEyebrow }}</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,46px);line-height:1.12">{{ t.edTitle }}</h2>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.edP1 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.edP2 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.edP3 }}</p>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.edP4 }}</p>
+      <p style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(22px,2.2vw,30px);line-height:1.35;color:#37798f;text-wrap:pretty">{{ t.edP5 }}</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:clamp(40px,5vw,72px) 40px clamp(24px,3vw,40px)">
+  <div style="max-width:1400px;margin:0 auto 26px">
+    <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.historiaViva }}</span>
+  </div>
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:#ddd8cd">
+    
+    <div style="background:#f5f2ec;padding:34px 30px;display:flex;flex-direction:column;gap:12px">
+      <strong style="font-family: 'Cormorant Garamond',serif; font-weight: 300; font-size: clamp(30px,3.4vw,42px); line-height: 1.1">&gt; 200&nbsp;</strong><span style="font-size:13px;letter-spacing:.06em;line-height:1.7;color:#6d6155">{{ t.dada1 }}</span>
+      
+    </div><div style="background:#f5f2ec;padding:34px 30px;display:flex;flex-direction:column;gap:12px">
+      <strong style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.4vw,42px);line-height:1.1">1928</strong>
+      <span style="font-size:13px;letter-spacing:.06em;line-height:1.7;color:#6d6155">{{ t.dada2 }}</span>
+    </div>
+    <div style="background:#f5f2ec;padding:34px 30px;display:flex;flex-direction:column;gap:12px">
+      <strong style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.4vw,42px);line-height:1.1">{{ t.dada3Num }}</strong>
+      <span style="font-size:13px;letter-spacing:.06em;line-height:1.7;color:#6d6155">{{ t.dada3 }}</span>
+    </div>
+    <div style="background:#f5f2ec;padding:34px 30px;display:flex;flex-direction:column;gap:12px">
+      <strong style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.4vw,42px);line-height:1.1">5km</strong>
+      <span style="font-size:13px;letter-spacing:.06em;line-height:1.7;color:#6d6155">{{ t.dada4 }}</span>
+    </div>
+  </div>
+</section>
+
+<section id="problema" style="padding:clamp(72px,10vw,140px) 40px">
+  <div style="max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: clamp(40px,7vw,110px); align-items: start; position: relative">
+    <div style="display:flex;flex-direction:column;gap:22px">
+      <span style="font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: #37798F; position: relative">{{ t.eyebrow1 }}</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,4vw,52px);line-height:1.1;text-wrap:pretty">{{ t.probTitleA }} <em style="font-style: normal">{{ t.probTitleB }}</em>.</h2>
+      <div style="display:flex;flex-direction:column;gap:22px;font-size:16px;line-height:1.85;color:#4a4740;max-width:58ch">
+        <p style="margin:0;text-wrap:pretty">{{ t.probP1 }}</p>
+        <p style="margin:0;text-wrap:pretty">{{ t.probP2 }}</p>
+      </div>
+      <a href="{{ url.patrimoni }}" style="align-self:flex-start;margin-top:4px;font-size:11px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:#f5f2ec;background:#37798f;padding:15px 32px;border-radius:999px" style-hover="background:#2b5f71">{{ t.patCta }}</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+        <span style="position:absolute;inset:0;display:block"><img src="/img/patrimoni-foto.webp" alt="{{ t.alt.fotoAeria }}" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+      </div>
+      <p style="margin: 0; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #8a857c; text-align: right">{{ t.fotoCaption }}<br>{{ t.fotoVol }}&nbsp;&nbsp;<span style="letter-spacing: 2.2px;">1956</span></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section style="padding:0 40px clamp(28px,4vw,44px)">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(32px,6vw,80px);align-items:start">
+    <div style="position:relative;width:100%;aspect-ratio:4/5;display:flex;align-items:flex-start;justify-content:center;padding:14% 6% 0">
+      <img src="/img/casetes-obertes-logo.webp" alt="{{ t.alt.logoCasetes }}" style="max-width:70%;max-height:70%;object-fit:contain;display:block">
+    </div>
+    <div style="display:flex;flex-direction:column;gap:clamp(18px,2.4vw,26px);max-width:70ch">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.navCasetes }}</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,46px);line-height:1.12">{{ t.coTitle }}</h2>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.coText }}</p>
+      <a href="{{ url.casetes }}" style="align-self:flex-start;margin-top:4px;font-size:11px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:#f5f2ec;background:#37798f;padding:15px 32px;border-radius:999px" style-hover="background:#2b5f71">{{ t.coCta }}</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="bossa" style="padding:0 40px clamp(24px,3vw,40px)">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:clamp(28px,4vw,56px);align-items:start">
+    <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+      <img src="/img/bossa-principal.webp" alt="{{ t.alt.bossa }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px">
+      <div data-slider data-caption="#bossa-peu" data-caps="{{json t.bossaCaps}}" style="position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:#e7e2d8">
+        <div class="slide on" data-slide><img src="/img/bossa-slide-1.webp" alt="{{ t.alt.bossa1 }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div class="slide" data-slide><img src="/img/bossa-slide-2.webp" alt="{{ t.alt.bossa2 }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+        <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"></span></div>
+        <button type="button" data-prev aria-label="{{ t.anterior }}" style="position:absolute;left:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.85);cursor:pointer;color:#1a1a18;font-size:15px;line-height:1;z-index:2" style-hover="background:#f5f2ec">‹</button>
+        <button type="button" data-next aria-label="{{ t.seguent }}" style="position:absolute;right:10px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.85);cursor:pointer;color:#1a1a18;font-size:15px;line-height:1;z-index:2" style-hover="background:#f5f2ec">›</button>
+        <div style="position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;z-index:2"><span style="display:flex;gap:6px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(245,242,236,.85)"><span class="dot on" data-dot style="width:7px;height:7px"></span><span class="dot" data-dot style="width:7px;height:7px"></span><span class="dot" data-dot style="width:7px;height:7px"></span></span></div>
+      </div>
+      <p id="bossa-peu" aria-live="polite" style="margin:0;font-size:13px;line-height:1.7;color:#6d6155;min-height:3.4em">{{ t.bossaCap1 }}</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.bossaEyebrow }}</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(26px,3vw,38px);line-height:1.14">{{ t.bossaTitle }}</h2>
+      <p style="margin: 0; font-size: 16px; line-height: 1.55; color: #4a4740; text-wrap: pretty">{{ t.bossaText }}</p>
+      <a href="https://maps.app.goo.gl/LdeArdMHEPsaLmMW7" target="_blank" rel="noopener" style="align-self:flex-start;font-size:11px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:#f5f2ec;background:#37798f;padding:15px 32px;border-radius:999px" style-hover="background:#2b5f71">{{ t.bossaCta }}</a>
+    </div>
+  </div>
+</section>
+
+<section id="cronologia" style="padding:clamp(64px,8vw,110px) 40px clamp(64px,8vw,110px);background:#37798f;color:#f5f2ec">
+  <div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
+    <div style="display:flex;flex-direction:column;gap:16px;max-width:46ch">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:rgba(245,242,236,.65)">{{ t.cronoEyebrow }}</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,46px);line-height:1.12">{{ t.cronoTitle }}</h2>
+    </div>
+    <ol style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:0;border-top:1px solid rgba(245,242,236,.28)">
+      <li style="display:flex;flex-direction:column;gap:14px;padding:28px 24px 34px 0;border-right:1px solid rgba(245,242,236,.18)">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,4.4vw,58px);line-height:1;color:#f5f2ec">1922</span>
+        <h3 style="margin:0;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;color:#f5f2ec">{{ t.crono1t }}</h3>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:rgba(245,242,236,.82);text-wrap:pretty">{{ t.crono1p }}</p>
+      </li>
+      <li style="display:flex;flex-direction:column;gap:14px;padding:28px 24px 34px;border-right:1px solid rgba(245,242,236,.18)">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,4.4vw,58px);line-height:1;color:#f5f2ec">1928</span>
+        <h3 style="margin:0;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;color:#f5f2ec">{{ t.crono2t }}</h3>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:rgba(245,242,236,.82);text-wrap:pretty">{{ t.crono2p }}</p>
+      </li>
+      <li style="display:flex;flex-direction:column;gap:14px;padding:28px 24px 34px;border-right:1px solid rgba(245,242,236,.18)">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,4.4vw,58px);line-height:1;color:#f5f2ec">1988</span>
+        <h3 style="margin:0;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;color:#f5f2ec">{{ t.crono3t }}</h3>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:rgba(245,242,236,.82);text-wrap:pretty">{{ t.crono3p }}</p>
+      </li>
+      <li style="display:flex;flex-direction:column;gap:14px;padding:28px 24px 34px;border-right:1px solid rgba(245,242,236,.18)">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,4.4vw,58px);line-height:1;color:#f5f2ec">2024</span>
+        <h3 style="margin:0;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;color:#f5f2ec">{{ t.crono4t }}</h3>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:rgba(245,242,236,.82);text-wrap:pretty">{{ t.crono4p }}</p>
+      </li>
+      <li style="display:flex;flex-direction:column;gap:14px;padding:28px 0 34px 24px">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(38px,4.4vw,58px);line-height:1;color:#f5f2ec">2026</span>
+        <h3 style="margin:0;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.5;color:#f5f2ec">{{ t.crono5t }}</h3>
+        <p style="margin:0;font-size:15px;line-height:1.65;color:rgba(245,242,236,.82);text-wrap:pretty">{{ t.crono5p }}</p>
+      </li>
+    </ol>
+    <p style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(22px,2.4vw,32px);line-height:1.35;color:#f5f2ec;max-width:34ch;border-top:1px solid rgba(245,242,236,.28);padding-top:clamp(28px,3vw,40px)">{{ t.cronoPeu }}</p>
+  </div>
+</section>
+
+<section id="marnostra" style="padding:clamp(36px,5vw,64px) 40px clamp(72px,10vw,140px)">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(32px,5vw,72px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:22px;max-width:52ch">
+      <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.eyebrow3 }}</span>
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,46px);line-height:1.12">{{ t.mnTitleA }} <em style="font-style: normal">{{ t.mnTitleB }}</em></h2>
+      <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.mnText }}</p>
+      <a href="https://marnostra.org/" target="_blank" rel="noopener" style="align-self:flex-start;margin-top:4px;font-size:11px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;color:#f5f2ec;background:#37798f;padding:15px 32px;border-radius:999px" style-hover="background:#2b5f71">{{ t.mnCta }}</a>
+    </div>
+    <div style="position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:#e7e2d8">
+      <span style="position:absolute;inset:0;display:block"></span>
+    </div>
+    <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;border-top:1px solid #ddd8cd;width:100%;max-width:270px">
+      <!--POBLES-->
+    </ul>
+  </div>
+</section><section id="actualitat" style="padding:0 40px clamp(72px,10vw,140px)">
+  <div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(32px,4vw,56px)">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap">
+      <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(30px,3.6vw,46px)">{{ t.navActualitat }}</h2>
+      <a href="#actualitat" style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-bottom:1px solid #c9c2b4;padding-bottom:6px" style-hover="border-color:#1a1a18">{{ t.totesPubs }}</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:26px;margin-top:-24px">
+      <div style="display:flex;align-items:center;gap:26px">
+        <a href="https://www.instagram.com/platgesdenules/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#37798f;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:block">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>Instagram
+        </a>
+        <span style="width:1px;height:12px;background:#ddd8cd"></span>
+        <a href="https://www.facebook.com/platgesdenules/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:9px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#37798f;text-decoration:none">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:block">
+            <path d="M14.8 3.5h-2.3a3.6 3.6 0 0 0-3.6 3.6V10H7v3h1.9v7.5"></path>
+            <path d="M8.9 13h5"></path>
+          </svg>Facebook
+        </a>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(28px,4vw,52px)">
+      <article style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+          <span style="position:absolute;inset:0;display:block"><img src="/img/not-1.webp" alt="{{ t.alt.not1 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+        </div>
+        <div style="box-sizing: border-box; display: flex; flex-direction: column; gap: 12px"><time style="font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: #8a857c">{{ t.data1 }}</time></div>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;line-height:1.25;text-wrap:pretty"><a href="#actualitat">{{ t.not1t }}</a></h3>
+        <p style="margin:0;font-size:15px;line-height:1.8;color:#4a4740">{{ t.not1p }}</p>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+          <span style="position:absolute;inset:0;display:block"><img src="/img/not-2.webp" alt="{{ t.alt.not2 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+        </div>
+        <time style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8a857c">{{ t.data2 }}</time>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;line-height:1.25;text-wrap:pretty"><a href="#actualitat">{{ t.not2t }}</a></h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4a4740; white-space: pre-line">{{ t.not2p }}</p>
+      </article>
+      <article style="display:flex;flex-direction:column;gap:18px">
+        <div data-slider style="position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;background:#e7e2d8">
+          <div class="slide on" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/not-3.webp" alt="{{ t.alt.not3 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+          <div class="slide" data-slide><span style="position:absolute;inset:0;display:block"><img src="/img/not-3b.webp" alt="{{ t.alt.not3b }}" style="width:100%;height:100%;object-fit:cover;display:block"></span></div>
+          <button type="button" data-prev aria-label="{{ t.anterior }}" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);width:20px;height:20px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.85);cursor:pointer;color:#1a1a18;font-size:12px;line-height:1" style-hover="background:#f5f2ec">‹</button>
+          <button type="button" data-next aria-label="{{ t.seguent }}" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);width:20px;height:20px;display:grid;place-items:center;border:0;border-radius:999px;background:rgba(245,242,236,.85);cursor:pointer;color:#1a1a18;font-size:12px;line-height:1" style-hover="background:#f5f2ec">›</button>
+        </div>
+        <time style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8a857c">{{ t.data3 }}</time>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;line-height:1.25;text-wrap:pretty"><a href="#actualitat">{{ t.not3t }}</a></h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4a4740">{{ t.not3p }}</p>
+      </article>
+      <article data-more-item="noticies" hidden style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+          <span style="position:absolute;inset:0;display:block"><img src="/img/not-antiga-1.webp" alt="{{ t.alt.notA1 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+        </div>
+        <time style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8a857c">{{ t.dataA1 }}</time>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;line-height:1.25;text-wrap:pretty"><a href="#actualitat">{{ t.notA1t }}</a></h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4a4740; font-style: normal">{{ t.notA1p }}</p>
+      </article>
+      <article data-more-item="noticies" hidden style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+          <span style="position:absolute;inset:0;display:block"><img src="/img/not-antiga-2.webp" alt="{{ t.alt.notA2 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+        </div>
+        <time style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8a857c">{{ t.dataA2 }}</time>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;line-height:1.25;text-wrap:pretty"><a href="#actualitat">{{ t.notA2t }}</a></h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #4a4740">{{ t.notA2p }}</p>
+      </article>
+      <article data-more-item="noticies" hidden style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+          <span style="position:absolute;inset:0;display:block"><img src="/img/not-antiga-3.webp" alt="{{ t.alt.notA3 }}" style="width:100%;height:100%;object-fit:cover;display:block"></span>
+        </div>
+        <time style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8a857c">{{ t.dataA3 }}</time>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;line-height:1.25;text-wrap:pretty"><a href="#actualitat">{{ t.notA3t }}</a></h3>
+        <p style="margin:0;font-size:15px;line-height:1.8;color:#4a4740">{{ t.notA3p }}</p>
+      </article>
+      <article data-more-item="noticies" hidden style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+          <span style="position:absolute;inset:0;display:block"></span>
+        </div>
+        <time style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8a857c">{{ t.dataA4 }}</time>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;line-height:1.25;text-wrap:pretty"><a href="#actualitat">{{ t.notA4t }}</a></h3>
+        <p style="margin:0;font-size:15px;line-height:1.5;color:#4a4740">{{ t.notA4p }}</p>
+      </article>
+      <article data-more-item="noticies" hidden style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+          <span style="position:absolute;inset:0;display:block"></span>
+        </div>
+        <time style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8a857c">{{ t.dataA5 }}</time>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;line-height:1.25;text-wrap:pretty"><a href="#actualitat">{{ t.notA5t }}</a></h3>
+        <p style="margin:0;font-size:15px;line-height:1.5;color:#4a4740">{{ t.notA5p }}</p>
+      </article>
+      <article data-more-item="noticies" hidden style="display:flex;flex-direction:column;gap:18px">
+        <div style="position:relative;width:100%;aspect-ratio:4/5;background:#e7e2d8">
+          <span style="position:absolute;inset:0;display:block"></span>
+        </div>
+        <time style="font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#8a857c">{{ t.dataA6 }}</time>
+        <h3 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:26px;line-height:1.25;text-wrap:pretty"><a href="#actualitat">{{ t.notA6t }}</a></h3>
+        <p style="margin:0;font-size:15px;line-height:1.5;color:#4a4740">{{ t.notA6p }}</p>
+      </article>
+    </div>
+    <button type="button" data-more="noticies" aria-expanded="false" data-label-more="{{ t.veureMes }}" data-label-less="{{ t.veureMenys }}" style="align-self:center;display:flex;align-items:center;gap:10px;background:transparent;border:0;padding:0;cursor:pointer;font-family:Jost,sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#37798f">
+      <span class="rot" style="display:inline-block;font-size:15px;line-height:1" aria-hidden="true">+</span><span data-label>{{ t.veureMes }}</span>
+    </button>
+  </div>
+</section>
+
+<section id="sumat" style="padding:clamp(72px,10vw,130px) 40px;background:#ece7dd">
+  <div style="max-width:760px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center">
+    <span style="font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#37798f">{{ t.eyebrow4 }}</span>
+    <h2 style="margin:0;font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(32px,4.4vw,54px);line-height:1.1;text-wrap:pretty">{{ t.sumatTitleA }} <em style="font-style: normal">{{ t.sumatTitleB }}</em>.</h2>
+    <p style="margin:0;max-width:52ch;font-size:16px;line-height:1.85;color:#4a4740">{{ t.sumatText }}</p>
+    <form data-mailto data-subject="Suma't" data-ok="{{ t.okMsg }}" style="width:100%;max-width:560px;display:flex;flex-direction:column;gap:26px;padding-top:14px">
+      <input type="text" name="nom" autocomplete="name" aria-label="{{ t.phNom }}" placeholder="{{ t.phNom }}" style="font-family:Jost,sans-serif;font-weight:300;font-size:15px;letter-spacing:.06em;text-align:center;padding:12px 4px;border:0;border-bottom:1px solid #c9c2b4;background:transparent;color:#1a1a18;outline:none" style-focus="border-color:#1a1a18">
+      <input type="email" name="correu" autocomplete="email" aria-label="{{ t.phCorreu }}" placeholder="{{ t.phCorreu }}" style="font-family:Jost,sans-serif;font-weight:300;font-size:15px;letter-spacing:.06em;text-align:center;padding:12px 4px;border:0;border-bottom:1px solid #c9c2b4;background:transparent;color:#1a1a18;outline:none" style-focus="border-color:#1a1a18">
+      <textarea name="missatge" rows="4" aria-label="{{ t.phMissatge }}" placeholder="{{ t.phMissatge }}" style="font-family:Jost,sans-serif;font-weight:300;font-size:15px;letter-spacing:.06em;line-height:1.7;text-align:center;padding:12px 4px;border:0;border-bottom:1px solid #c9c2b4;background:transparent;color:#1a1a18;outline:none;resize:vertical" style-focus="border-color:#1a1a18"></textarea>
+      <button type="submit" style="align-self:center;margin-top:10px;font-family:Jost,sans-serif;font-weight:400;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#f5f2ec;background:#37798f;border:0;border-radius:999px;padding:17px 40px;cursor:pointer" style-hover="background:#2b5f71">{{ t.btnSumat }}</button>
+      <p style="margin:0;font-size:12px;letter-spacing:.08em;line-height:1.8;color:#8a857c" data-msg aria-live="polite">{{ t.noMsg }}</p>
+    </form>
+  </div>
+</section>
+</main>
+{{> footer}}

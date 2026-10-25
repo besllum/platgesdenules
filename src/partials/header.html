@@ -1,0 +1,58 @@
+<header class="site-header" style="position:sticky;top:0;z-index:50;background:rgba(245,242,236,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)">
+  <div style="max-width:1400px;margin:0 auto;padding:8px 40px 0;display:flex;justify-content:flex-end;align-items:center;gap:14px">
+    <a href="https://www.instagram.com/platgesdenules/" target="_blank" rel="noopener" aria-label="Instagram" style="display:block;line-height:0;color:#8a857c" style-hover="color:#1a1a18">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:block" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+        <circle cx="12" cy="12" r="4"></circle>
+        <circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/platgesdenules/" target="_blank" rel="noopener" aria-label="Facebook" style="display:block;line-height:0;color:#8a857c" style-hover="color:#1a1a18">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" style="display:block" aria-hidden="true">
+        <path d="M14.8 3.5h-2.3a3.6 3.6 0 0 0-3.6 3.6V10H7v3h1.9v7.5"></path>
+        <path d="M8.9 13h4.4"></path>
+      </svg>
+    </a>
+    <span style="width:1px;height:10px;background:#d4cec1"></span>
+    <a href="mailto:platgesdenules@gmail.com" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#8a857c" style-hover="color:#1a1a18">{{ t.escriuNos }}</a>
+    <span class="langs" style="display:flex;align-items:center;gap:5px;background:#37798f;border-radius:999px;padding:4px 9px">
+      <span class="lang-btn is-on" aria-current="true">{{ me.label }}</span>
+      <span style="font-size:9px;color:rgba(245,242,236,.4)" aria-hidden="true">/</span>
+      <a class="lang-btn" href="{{ other.url }}" hreflang="{{ other.hreflang }}" lang="{{ other.hreflang }}" title="{{ t.canviIdioma }}">{{ other.label }}</a>
+    </span>
+  </div>
+  <div style="max-width:1400px;margin:0 auto;padding:10px 40px 22px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:18px 26px">
+    <nav class="nav-l" aria-label="Principal">
+      <a class="nav-a {{ active.casetes }}" href="{{ url.casetes }}">{{ t.navCasetes }}</a>
+      <span class="dd">
+        <a class="nav-a {{ active.patrimoni }}" href="{{ url.patrimoni }}">{{ t.navProblema }}</a>
+        <span class="dd-menu">
+          <span style="display:flex;flex-direction:column;background:#f5f2ec;border:1px solid #ddd8cd;box-shadow:0 10px 30px rgba(26,26,24,.09)">
+            <a href="{{ url.patrimoni }}#cultura" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px 16px;border-bottom:1px solid #e7e2d8;color:#4a4740" style-hover="background:#ece7dd;color:#1a1a18">{{ t.navCultural }}</a>
+            <a href="{{ url.patrimoni }}#natural" style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;padding:13px 16px;color:#4a4740" style-hover="background:#ece7dd;color:#1a1a18">{{ t.navNatura }}</a>
+          </span>
+        </span>
+      </span>
+    </nav>
+    <button type="button" class="burger" aria-label="{{ t.menu }}" aria-expanded="false" aria-controls="menu-mobil">
+      <span class="bar b1"></span>
+      <span class="bar b2"></span>
+      <span class="bar b3"></span>
+    </button>
+    <a href="{{ url.home }}" style="flex:0 0 auto;display:block;line-height:0" aria-label="Platges de Nules"><img src="/img/logo-platges-nules.webp" alt="{{ t.alt.logo }}" width="135" height="52" fetchpriority="high" style="display:block;height:52px;width:135px;filter:invert(.74)"></a>
+    <nav class="nav-r" aria-label="Seccions">
+      <a class="nav-a" href="{{ url.home }}#actualitat">{{ t.navActualitat }}</a>
+      <a class="nav-a" href="{{ url.home }}#marnostra">Mar Nostra</a>
+      <a class="nav-a" href="{{ url.home }}#sumat">{{ t.navSumat }}</a>
+    </nav>
+    <nav id="menu-mobil" class="mnav" aria-label="{{ t.menu }}">
+      <a class="m-a {{ active.casetes }}" href="{{ url.casetes }}">{{ t.navCasetes }}</a>
+      <a class="m-a {{ active.patrimoni }}" href="{{ url.patrimoni }}">{{ t.navProblema }}</a>
+      <a class="m-a m-sub" href="{{ url.patrimoni }}#cultura">{{ t.navCultural }}</a>
+      <a class="m-a m-sub" href="{{ url.patrimoni }}#natural">{{ t.navNatura }}</a>
+      <a class="m-a" href="{{ url.home }}#actualitat">{{ t.navActualitat }}</a>
+      <a class="m-a" href="{{ url.home }}#marnostra">Mar Nostra</a>
+      <a class="m-a m-last" href="{{ url.home }}#sumat">{{ t.navSumat }}</a>
+    </nav>
+  </div>
+</header>
