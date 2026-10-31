@@ -122,7 +122,7 @@
       </div>
       <div style="display:flex;flex-direction:column;gap:18px;max-width:none">
         <p style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.natP1 }}</p>
-        <p id="mes-nat" data-more-item="nat" hidden style="margin:0;font-size:16px;line-height:1.85;color:#4a4740;text-wrap:pretty">{{ t.natP2 }}</p>
+        <div id="mes-nat" data-more-item="nat" hidden style="display:flex;flex-direction:column;gap:18px">{{{ t.natMes }}}</div>
         <button type="button" data-more="nat" aria-expanded="false" aria-controls="mes-nat" data-label-more="{{ t.llegirMes }}" data-label-less="{{ t.llegirMenys }}" style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:transparent;border:0;padding:0;cursor:pointer;font-family:Jost,sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#37798f">
           <span class="rot" style="display:inline-block;font-size:15px;line-height:1" aria-hidden="true">+</span><span data-label>{{ t.llegirMes }}</span>
         </button>
