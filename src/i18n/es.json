@@ -90,9 +90,9 @@
     "dataA4": "Junio 2025",
     "notA4t": "II Marcha por San Juan «Mo n'anem a la mar»",
     "notA4p": "Más de un centenar de personas participaron en la II Marcha por San Juan «Mo n'anem a la mar», organizada por la Asociación Platges de Nules. Colaboraron el Ayuntamiento de Nules, Sant Joan Nules, la Associació Cavalls Nules, Castelló Sud, Corretjola Nules, la Asociación de Vecinos de la playa de Nules y la Asociación Amics de la Serra d'Espadà.",
-    "dataA5": "Junio 2024",
-    "notA5t": "Titular pendiente",
-    "notA5p": "Texto pendiente de redactar.",
+    "dataA5": "Junio 2025",
+    "notA5t": "Nules une fuerzas por la protección del litoral",
+    "notA5p": "Jornada «La gestió del litoral. Reptes i oportunitats a la platja de Nules». «Es urgente adaptar las leyes españolas, incluida la Ley de Costas, siguiendo los principios del Convenio Europeo del Paisaje, ratificado por el gobierno de España en 2004 y de obligado cumplimiento. Hoy damos un paso más: sociedad civil, expertos e instituciones trabajaremos juntos para reclamar una gestión del litoral que proteja a las personas y su entorno», declaraciones de la Directiva de la Asociación Platges de Nules.",
     "dataA6": "Marzo 2024",
     "notA6t": "Titular pendiente",
     "notA6p": "Texto pendiente de redactar.",
@@ -233,6 +233,7 @@
     ],
     "cartell": "Cartel de Casetas abiertas",
     "marNostra": "Vecinos y vecinas de los pueblos de Mar Nostra reunidos frente al mar",
-    "notA4": "Carro tirado por caballos durante la II Marcha por San Juan hacia la playa de Nules"
+    "notA4": "Carro tirado por caballos durante la II Marcha por San Juan hacia la playa de Nules",
+    "notA5": "Participantes en la jornada «La gestió del litoral. Reptes i oportunitats a la platja de Nules»"
   }
 }
