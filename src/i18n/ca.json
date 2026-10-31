@@ -115,7 +115,13 @@
       "Villa Antonieta, en verd.",
       "Villa Palmer, en blau.",
       "Villa Josefina, en ocre."
-    ]
+    ],
+    "dataA7": "Juny 2023",
+    "notA7t": "I Marxa per Sant Joan «Mo n'anem a la mar»",
+    "notA7p": "A peu, en bicicleta, en patinet, a cavall i en carro: l'estiu va començar a Nules amb la I Marxa per Sant Joan. Des de l'Associació Platges de Nules agraïm l'acollida del veïnat i la col·laboració de tots els qui la van fer possible: l'Ajuntament i la Policia Local de Nules, Castelló Sud, la Parròquia de Sant Bartomeu i Sant Jaume i els Nazarenos de Nules, que van obrir les portes del Convent, l'Associació Cavalls Nules, l'Associació Cultural Corretjola Nules, l'Oració de l'Hort Nules, l'Associació de Veïns de la platja de Nules, els clubs Trinoulas i Club Ciclista San José Nules, les empreses que van aportar els regals del sorteig i la Cooperativa de Sant Josep-Charter, per l'avituallament d'aigua.",
+    "dataA8": "Febrer 2023",
+    "notA8t": "Les Casetes, museu viu",
+    "notA8p": "El 18 i 19 de febrer de 2023 es van celebrar les II Jornades de Memòria Històrica «La Batalla de Llevant». El dissabte, a la Caixa Rural de Nules; i el diumenge, «Les Casetes, museu viu»: la visita guiada «La Batalla de Llevant. Nules – la Vall d'Uixó – Almenara», amb eixida des del Jardí Botànic de Nules, i la recreació històrica «1938. Torre Adela», a l'avinguda Columbretes de les Platges de Nules."
   },
   "patrimoni": {
     "culEyebrow": "La cultura",
@@ -235,6 +241,8 @@
     "marNostra": "Veïns i veïnes dels pobles de Mar Nostra reunits davant la mar",
     "notA4": "Carro tirat per cavalls durant la II Marxa per Sant Joan cap a la platja de Nules",
     "notA5": "Participants en la jornada «La gestió del litoral. Reptes i oportunitats a la platja de Nules»",
-    "notA6": "Cartell de la 3a edició de Casetes obertes, «100 anys a vora mar»"
+    "notA6": "Cartell de la 3a edició de Casetes obertes, «100 anys a vora mar»",
+    "notA7": "Caminants i carros coberts tirats per cavalls en la I Marxa per Sant Joan, entre tarongers",
+    "notA8": "Cartell «Casetes, museu viu» amb una fotògrafa davant de la Torre Adela"
   }
 }

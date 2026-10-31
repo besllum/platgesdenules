@@ -115,7 +115,13 @@
       "Villa Antonieta, en verde.",
       "Villa Palmer, en azul.",
       "Villa Josefina, en ocre."
-    ]
+    ],
+    "dataA7": "Junio 2023",
+    "notA7t": "I Marcha por San Juan «Mo n'anem a la mar»",
+    "notA7p": "A pie, en bicicleta, en patinete, a caballo y en carro: el verano empezó en Nules con la I Marxa per Sant Joan. Desde la Asociación Platges de Nules agradecemos la acogida del vecindario y la colaboración de todos los que la hicieron posible: el Ayuntamiento y la Policía Local de Nules, Castelló Sud, la Parroquia de San Bartolomé y San Jaime y los Nazarenos de Nules, que abrieron las puertas del Convento, la Associació Cavalls Nules, la Asociación Cultural Corretjola Nules, l'Oració de l'Hort Nules, la Asociación de Vecinos de la playa de Nules, los clubes Trinoulas y Club Ciclista San José Nules, las empresas que aportaron los regalos del sorteo y la Cooperativa de Sant Josep-Charter, por el avituallamiento de agua.",
+    "dataA8": "Febrero 2023",
+    "notA8t": "Les Casetes, museu viu",
+    "notA8p": "El 18 y 19 de febrero de 2023 se celebraron las II Jornadas de Memoria Histórica «La Batalla de Levante». El sábado, en la Caixa Rural de Nules; y el domingo, «Les Casetes, museu viu»: la visita guiada «La Batalla de Levante. Nules – La Vall d'Uixó – Almenara», con salida desde el Jardín Botánico de Nules, y la recreación histórica «1938. Torre Adela», en la avenida Columbretes de las Platges de Nules."
   },
   "patrimoni": {
     "culEyebrow": "La cultura",
@@ -235,6 +241,8 @@
     "marNostra": "Vecinos y vecinas de los pueblos de Mar Nostra reunidos frente al mar",
     "notA4": "Carro tirado por caballos durante la II Marcha por San Juan hacia la playa de Nules",
     "notA5": "Participantes en la jornada «La gestió del litoral. Reptes i oportunitats a la platja de Nules»",
-    "notA6": "Cartel de la 3.ª edición de Casetes obertes, «100 anys a vora mar»"
+    "notA6": "Cartel de la 3.ª edición de Casetes obertes, «100 anys a vora mar»",
+    "notA7": "Caminantes y carros cubiertos tirados por caballos en la I Marcha por San Juan, entre naranjos",
+    "notA8": "Cartel «Casetes, museu viu» con una fotógrafa delante de la Torre Adela"
   }
 }
