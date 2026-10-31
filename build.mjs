@@ -212,7 +212,7 @@ function poblesHtml(lang) {
             <span style="display:flex;align-items:center;gap:12px;color:#8a857c;font-size:12px;letter-spacing:.1em">${String(p.assoc.length).padStart(2, '0')}<span class="rot" style="display:inline-block;font-size:14px;line-height:1;color:#37798f" aria-hidden="true">+</span></span>
           </button>
           <ul id="poble-${i}" hidden style="margin:0 0 18px;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px">
-            ${p.assoc.map(a => `<li style="font-size:14px;line-height:1.6;letter-spacing:.02em;color:#4a4740">${esc(a)}</li>`).join('\n            ')}
+            ${p.assoc.map(a => { const nom = typeof a === 'string' ? a : a.nom; const inner = (typeof a === 'object' && a.url) ? `<a href="${esc(a.url)}" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid #c9c2b4" style-hover="color:#37798f;border-color:#37798f">${esc(nom)}</a>` : esc(nom); return `<li style="font-size:14px;line-height:1.6;letter-spacing:.02em;color:#4a4740">${inner}</li>`; }).join('\n            ')}
           </ul>
         </li>`;
   }).join('\n        ');

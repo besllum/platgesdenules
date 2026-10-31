@@ -82,6 +82,6 @@
     { "nom": "Nules", "assoc": ["Associació Platges de Nules"], "nosaltres": true },
     { "nom": "Xilxes", "assoc": ["AV Platja de Xilxes"] },
     { "nom": "Moncofa", "assoc": ["AV Masbò", "AV Beniesma", "AV Platja de Moncofa"] },
-    { "nom": "Almenara", "assoc": ["AV Casablanca", "AV Platja d'Almenara"] }
+    { "nom": "Almenara", "assoc": ["AV Casablanca", { "nom": "AV Platja d'Almenara", "url": "https://platjadalmenara.com/es/" }] }
   ]
 }
