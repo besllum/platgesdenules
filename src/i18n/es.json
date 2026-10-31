@@ -127,7 +127,10 @@
     "notA9p": "El sábado 28 de mayo, la Caixa Rural de Nules acogió la Jornada MED22. Valores y retos del paisaje mediterráneo, organizada por el Ayuntamiento de Nules y la Asociación Platges de Nules. Una jornada abierta a responsables de la administración, asociaciones, colectivos, entidades, empresas y público general.",
     "dataA10": "",
     "notA10t": "Jornada de Arquitectura y Paisaje. El Faro de Platges de Nules",
-    "notA10p": "Una jornada sobre el patrimonio marítimo-portuario de la costa de Castellón y el faro de Platges de Nules. Empezó con la subida al faro y continuó con la visita a Les Casetes, el taller para niños y niñas «Recortable. El Faro» y un recorrido por el Paraje Natural Municipal de L'Estany y la Marjaleria, espacio de la Red Natura 2000. El acto principal, en la Caixa Rural de Nules, incluyó las ponencias «Construir el territorio sobre la mutante franja litoral», «Les Casetes: paisaje social y patrimonial» y «El valor de la custodia de la costa. La Ruta de los torreros entre Burriana, Nules y Moncofa», esta última a cargo del investigador local Miguel Ángel Sanz."
+    "notA10p": "Una jornada sobre el patrimonio marítimo-portuario de la costa de Castellón y el faro de Platges de Nules. Empezó con la subida al faro y continuó con la visita a Les Casetes, el taller para niños y niñas «Recortable. El Faro» y un recorrido por el Paraje Natural Municipal de L'Estany y la Marjaleria, espacio de la Red Natura 2000. El acto principal, en la Caixa Rural de Nules, incluyó las ponencias «Construir el territorio sobre la mutante franja litoral», «Les Casetes: paisaje social y patrimonial» y «El valor de la custodia de la costa. La Ruta de los torreros entre Burriana, Nules y Moncofa», esta última a cargo del investigador local Miguel Ángel Sanz.",
+    "dataA11": "Diciembre 2020",
+    "notA11t": "Recuperar el hábitat junto al mar",
+    "notA11p": "La fachada litoral de Platges de Nules se renaturaliza con la vegetación que existía frente a «Les casetes» antes de su desertización y salinización por el avance del mar. El alumnado-trabajador del Taller de Empleo se encarga de plantar la vegetación característica sobre las dunas consolidadas con la arena de los temporales de principios de 2020; la concejala de Playas, M. José Esteban, y el concejal de Medio Ambiente, César Estañol, visitaron los trabajos. Un pequeño paso que debe ir acompañado de protecciones como espigones o arrecifes que devuelvan la línea de costa de 1908, antes de la construcción de puertos y embalses."
   },
   "patrimoni": {
     "culEyebrow": "La cultura",
@@ -251,6 +254,7 @@
     "notA7": "Caminantes y carros cubiertos tirados por caballos en la I Marcha por San Juan, entre naranjos",
     "notA8": "Cartel «Casetes, museu viu» con una fotógrafa delante de la Torre Adela",
     "notA9": "Cartel de la Jornada MED22. Valores y retos del paisaje mediterráneo",
-    "notA10": "Autoridades y ponentes en el escenario de la Jornada de Arquitectura y Paisaje en la Caixa Rural de Nules"
+    "notA10": "Autoridades y ponentes en el escenario de la Jornada de Arquitectura y Paisaje en la Caixa Rural de Nules",
+    "notA11": "Alumnado del Taller de Empleo plantando vegetación de duna frente a las casetas de Nules"
   }
 }

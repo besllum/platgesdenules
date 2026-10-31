@@ -127,7 +127,10 @@
     "notA9p": "El dissabte 28 de maig, la Caixa Rural de Nules va acollir la Jornada MED22. Valors i reptes del paisatge mediterrani, organitzada per l'Ajuntament de Nules i l'Associació Platges de Nules. Una jornada oberta a responsables de l'administració, associacions, col·lectius, entitats, empreses i públic general.",
     "dataA10": "",
     "notA10t": "Jornada d'Arquitectura i Paisatge. El Far de Platges de Nules",
-    "notA10p": "Una jornada sobre el patrimoni marítimo-portuari de la costa de Castelló i el far de Platges de Nules. Va començar amb la pujada al far i va continuar amb la visita a Les Casetes, el taller per a xiquets i xiquetes «Retallable. El Far» i un recorregut pel Paratge Natural Municipal de l'Estany i la Marjaleria, espai de la Xarxa Natura 2000. L'acte principal, a la Caixa Rural de Nules, va incloure les ponències «Construir el territori sobre la mutant franja litoral», «Les Casetes: paisatge social i patrimonial» i «El valor de la custòdia de la costa. La Ruta dels torrers entre Borriana, Nules i Moncofa», l'última a càrrec de l'investigador local Miguel Ángel Sanz."
+    "notA10p": "Una jornada sobre el patrimoni marítimo-portuari de la costa de Castelló i el far de Platges de Nules. Va començar amb la pujada al far i va continuar amb la visita a Les Casetes, el taller per a xiquets i xiquetes «Retallable. El Far» i un recorregut pel Paratge Natural Municipal de l'Estany i la Marjaleria, espai de la Xarxa Natura 2000. L'acte principal, a la Caixa Rural de Nules, va incloure les ponències «Construir el territori sobre la mutant franja litoral», «Les Casetes: paisatge social i patrimonial» i «El valor de la custòdia de la costa. La Ruta dels torrers entre Borriana, Nules i Moncofa», l'última a càrrec de l'investigador local Miguel Ángel Sanz.",
+    "dataA11": "Desembre 2020",
+    "notA11t": "Recuperar l'hàbitat vora mar",
+    "notA11p": "La façana litoral de Platges de Nules es renaturalitza amb la vegetació que hi havia davant de «Les casetes» abans de la seua desertització i salinització per l'avanç de la mar. L'alumnat-treballador del Taller d'Ocupació s'encarrega de plantar la vegetació característica sobre les dunes consolidades amb l'arena dels temporals de principis de 2020; la regidora de Platges, M. José Esteban, i el regidor de Medi Ambient, César Estañol, van visitar els treballs. Un xicotet pas que ha d'anar acompanyat de proteccions com espigons o esculls que tornen la línia de costa de 1908, abans de la construcció de ports i embassaments."
   },
   "patrimoni": {
     "culEyebrow": "La cultura",
@@ -251,6 +254,7 @@
     "notA7": "Caminants i carros coberts tirats per cavalls en la I Marxa per Sant Joan, entre tarongers",
     "notA8": "Cartell «Casetes, museu viu» amb una fotògrafa davant de la Torre Adela",
     "notA9": "Cartell de la Jornada MED22. Valors i reptes del paisatge mediterrani",
-    "notA10": "Autoritats i ponents a l'escenari de la Jornada d'Arquitectura i Paisatge a la Caixa Rural de Nules"
+    "notA10": "Autoritats i ponents a l'escenari de la Jornada d'Arquitectura i Paisatge a la Caixa Rural de Nules",
+    "notA11": "Alumnat del Taller d'Ocupació plantant vegetació de duna davant de les casetes de Nules"
   }
 }
