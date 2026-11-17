@@ -55,6 +55,15 @@ a.lang-btn:hover{color:#f5f2ec}
 .hdot{width:8px;height:8px;padding:0;border:0;border-radius:999px;cursor:pointer;background:rgba(245,242,236,.75);box-shadow:0 0 0 1px rgba(20,20,18,.14)}
 .hdot.on{background:#37798f}
 
+/* Galeria contínua (arquitectura): es desplaça amb el ratolí, el dit o el trackpad */
+.arq-track{--gap:clamp(18px,2.4vw,32px);display:flex;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none;cursor:grab;-webkit-overflow-scrolling:touch;outline-offset:4px}
+.arq-track::-webkit-scrollbar{display:none}
+.arq-track.dragging{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
+.arq-track.dragging img{pointer-events:none}
+.arq-item{flex:0 0 calc((100% - 2 * var(--gap)) / 3);scroll-snap-align:start;user-select:none;-webkit-user-select:none}
+@media (max-width:859px){.arq-item{flex-basis:calc((100% - var(--gap)) / 1.6)}}
+@media (max-width:520px){.arq-item{flex-basis:82%}}
+
 /* Desplegables */
 .rot{transition:transform .25s ease}
 [aria-expanded="true"] .rot{transform:rotate(45deg)}

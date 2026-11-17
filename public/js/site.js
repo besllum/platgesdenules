@@ -37,24 +37,49 @@
     show(0);
   });
 
-  // Arquitectura: tres columnes sincronitzades sobre les mateixes 7 fotos
-  $$('[data-arq]').forEach(function (g) {
-    var cols = $$('[data-arq-col]', g), capsEl = $$('[data-arq-cap]', g), dots = $$('[data-dot]', g), pos = 0;
-    var caps = []; try { caps = JSON.parse(g.getAttribute('data-caps') || '[]'); } catch (e) {}
-    var n = cols.length ? $$('[data-slide]', cols[0]).length : 0;
-    if (!n) return;
-    function show(p) {
-      pos = (p + n) % n;
-      cols.forEach(function (c, ci) {
-        var idx = (pos + ci) % n;
-        $$('[data-slide]', c).forEach(function (el, k) { el.classList.toggle('on', k === idx); });
-        if (capsEl[ci]) capsEl[ci].textContent = caps[idx] || '';
-      });
-      dots.forEach(function (d, k) { d.classList.toggle('on', k === pos); });
-    }
-    $$('[data-prev]', g).forEach(function (b) { b.addEventListener('click', function () { show(pos - 1); }); });
-    $$('[data-next]', g).forEach(function (b) { b.addEventListener('click', function () { show(pos + 1); }); });
-    show(0);
+  // Galeria contínua: arrossegar amb el ratolí, fletxes i teclat
+  $$('[data-strip]').forEach(function (g) {
+    var track = g.querySelector('[data-track]');
+    if (!track) return;
+    var step = function () { var it = track.querySelector('.arq-item'); var gap = parseFloat(getComputedStyle(track).columnGap) || 0; return it ? it.getBoundingClientRect().width + gap : track.clientWidth; };
+    var go = function (dir) {
+      var max = track.scrollWidth - track.clientWidth - 2;
+      if (dir > 0 && track.scrollLeft >= max) track.scrollTo({ left: 0 });
+      else if (dir < 0 && track.scrollLeft <= 2) track.scrollTo({ left: track.scrollWidth });
+      else track.scrollBy({ left: dir * step() });
+    };
+    $$('[data-prev]', g).forEach(function (b) { b.addEventListener('click', function () { go(-1); }); });
+    $$('[data-next]', g).forEach(function (b) { b.addEventListener('click', function () { go(1); }); });
+    track.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { e.preventDefault(); go(1); } if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); } });
+    // Arrossegar amb el ratolí (en mòbil el desplaçament ja és natiu)
+    var down = false, startX = 0, startLeft = 0, moved = 0, lastX = 0, lastT = 0, vel = 0, raf = 0;
+    track.addEventListener('pointerdown', function (e) {
+      if (e.pointerType !== 'mouse' || e.button !== 0) return;
+      cancelAnimationFrame(raf);
+      down = true; moved = 0; startX = lastX = e.clientX; startLeft = track.scrollLeft; lastT = performance.now(); vel = 0;
+      track.classList.add('dragging');
+      track.setPointerCapture(e.pointerId);
+    });
+    track.addEventListener('pointermove', function (e) {
+      if (!down) return;
+      var dx = e.clientX - startX; moved = Math.max(moved, Math.abs(dx));
+      track.scrollLeft = startLeft - dx;
+      var now = performance.now(); vel = (e.clientX - lastX) / Math.max(1, now - lastT); lastX = e.clientX; lastT = now;
+    });
+    var end = function () {
+      if (!down) return;
+      down = false;
+      // inèrcia suau i després s'ajusta a la foto més pròxima
+      var v = vel * 16;
+      var glide = function () {
+        if (Math.abs(v) < 0.5) { track.classList.remove('dragging'); return; }
+        track.scrollLeft -= v; v *= 0.92; raf = requestAnimationFrame(glide);
+      };
+      glide();
+    };
+    track.addEventListener('pointerup', end);
+    track.addEventListener('pointercancel', end);
+    track.addEventListener('click', function (e) { if (moved > 5) { e.preventDefault(); e.stopPropagation(); } }, true);
   });
 
   // "Llegir més" / "Veure temes més antics"
