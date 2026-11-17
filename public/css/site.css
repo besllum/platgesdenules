@@ -60,7 +60,7 @@ a.lang-btn:hover{color:#f5f2ec}
 .arq-track::-webkit-scrollbar{display:none}
 .arq-track.dragging{cursor:grabbing;scroll-snap-type:none;scroll-behavior:auto}
 .arq-track.dragging img{pointer-events:none}
-.arq-item{flex:0 0 calc((100% - 2 * var(--gap)) / 3);scroll-snap-align:start;user-select:none;-webkit-user-select:none}
+.arq-item{flex:0 0 calc((100% - 3 * var(--gap)) / 3.5);scroll-snap-align:start;user-select:none;-webkit-user-select:none}
 @media (max-width:859px){.arq-item{flex-basis:calc((100% - var(--gap)) / 1.6)}}
 @media (max-width:520px){.arq-item{flex-basis:82%}}
 
